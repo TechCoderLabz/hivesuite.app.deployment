@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <defs>
+    <linearGradient id="b1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5dd6ff"/>
+      <stop offset="100%" stop-color="#3a8fe0"/>
+    </linearGradient>
+    <linearGradient id="b2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="b3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff9ec1"/>
+      <stop offset="100%" stop-color="#e31337"/>
+    </linearGradient>
+  </defs>
+  <!-- Three stacked isometric blocks, each shifted slightly to suggest the
+       Ketchapp slice-and-stack look. -->
+  <g transform="translate(48 78)">
+    <!-- bottom -->
+    <g>
+      <polygon points="-30,-6 0,-22 30,-6 0,10" fill="url(#b1)"/>
+      <polygon points="-30,-6 0,10 0,22 -30,6" fill="#1f3a6d"/>
+      <polygon points="30,-6 0,10 0,22 30,6" fill="#2d589f"/>
+    </g>
+    <!-- middle, slightly offset right -->
+    <g transform="translate(4 -22)">
+      <polygon points="-26,-5 0,-18 26,-5 0,8" fill="url(#b2)"/>
+      <polygon points="-26,-5 0,8 0,18 -26,5" fill="#3a226a"/>
+      <polygon points="26,-5 0,8 0,18 26,5" fill="#5b3aa3"/>
+    </g>
+    <!-- top, offset left -->
+    <g transform="translate(-3 -42)">
+      <polygon points="-22,-4 0,-14 22,-4 0,6" fill="url(#b3)"/>
+      <polygon points="-22,-4 0,6 0,14 -22,4" fill="#73152f"/>
+      <polygon points="22,-4 0,6 0,14 22,4" fill="#a91c3d"/>
+    </g>
+  </g>
+</svg>
