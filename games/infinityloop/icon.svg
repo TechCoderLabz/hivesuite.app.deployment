@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="#1a2238" stroke="rgba(168,216,255,0.3)" stroke-width="2"/>
+
+  <!-- 4x4 grid sample of pieces -->
+  <g stroke="#a8d8ff" stroke-width="2.6" stroke-linecap="round" fill="#a8d8ff">
+    <!-- Row 1 -->
+    <!-- L bend NE -->
+    <g transform="translate(8 8)">
+      <line x1="6" y1="6" x2="6" y2="0"/>
+      <line x1="6" y1="6" x2="12" y2="6"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- Line horizontal -->
+    <g transform="translate(20 8)">
+      <line x1="0" y1="6" x2="12" y2="6"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- T south -->
+    <g transform="translate(32 8)">
+      <line x1="0" y1="6" x2="12" y2="6"/>
+      <line x1="6" y1="6" x2="6" y2="12"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- L bend SW -->
+    <g transform="translate(44 8)">
+      <line x1="6" y1="6" x2="6" y2="12"/>
+      <line x1="6" y1="6" x2="0" y2="6"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+
+    <!-- Row 2 -->
+    <!-- Vertical line -->
+    <g transform="translate(8 20)">
+      <line x1="6" y1="0" x2="6" y2="12"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- Cross -->
+    <g transform="translate(20 20)">
+      <line x1="0" y1="6" x2="12" y2="6"/>
+      <line x1="6" y1="0" x2="6" y2="12"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- T east -->
+    <g transform="translate(32 20)">
+      <line x1="6" y1="0" x2="6" y2="12"/>
+      <line x1="6" y1="6" x2="12" y2="6"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- Vertical line -->
+    <g transform="translate(44 20)">
+      <line x1="6" y1="0" x2="6" y2="12"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+
+    <!-- Row 3 -->
+    <!-- L bend NE -->
+    <g transform="translate(8 32)">
+      <line x1="6" y1="6" x2="6" y2="0"/>
+      <line x1="6" y1="6" x2="12" y2="6"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- T south -->
+    <g transform="translate(20 32)">
+      <line x1="0" y1="6" x2="12" y2="6"/>
+      <line x1="6" y1="6" x2="6" y2="12"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- Endpoint south -->
+    <g transform="translate(32 32)">
+      <line x1="6" y1="6" x2="6" y2="12"/>
+      <circle cx="6" cy="6" r="1.6" stroke="none"/>
+      <circle cx="6" cy="6" r="0.8" fill="#1a2238" stroke="none"/>
+    </g>
+    <!-- L bend SW -->
+    <g transform="translate(44 32)">
+      <line x1="6" y1="6" x2="6" y2="12"/>
+      <line x1="6" y1="6" x2="0" y2="6"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+
+    <!-- Row 4 -->
+    <!-- empty / endpoint east -->
+    <g transform="translate(8 44)">
+      <line x1="6" y1="6" x2="12" y2="6"/>
+      <circle cx="6" cy="6" r="1.6" stroke="none"/>
+      <circle cx="6" cy="6" r="0.8" fill="#1a2238" stroke="none"/>
+    </g>
+    <!-- Horizontal line -->
+    <g transform="translate(20 44)">
+      <line x1="0" y1="6" x2="12" y2="6"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- Horizontal line -->
+    <g transform="translate(32 44)">
+      <line x1="0" y1="6" x2="12" y2="6"/>
+      <circle cx="6" cy="6" r="1.2" stroke="none"/>
+    </g>
+    <!-- Endpoint west -->
+    <g transform="translate(44 44)">
+      <line x1="6" y1="6" x2="0" y2="6"/>
+      <circle cx="6" cy="6" r="1.6" stroke="none"/>
+      <circle cx="6" cy="6" r="0.8" fill="#1a2238" stroke="none"/>
+    </g>
+  </g>
+</svg>

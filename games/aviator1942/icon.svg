@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <defs>
+    <linearGradient id="avbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1f3a"/>
+      <stop offset="100%" stop-color="#1a3a6e"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="url(#avbg)" stroke="#2e4a7a" stroke-width="2"/>
+
+  <!-- stars -->
+  <rect x="8" y="12" width="2" height="2" fill="#fff"/>
+  <rect x="16" y="6" width="2" height="2" fill="#fff"/>
+  <rect x="40" y="10" width="2" height="2" fill="#fff"/>
+  <rect x="52" y="14" width="2" height="2" fill="#fff"/>
+  <rect x="22" y="22" width="1.5" height="1.5" fill="#fff"/>
+  <rect x="46" y="22" width="1.5" height="1.5" fill="#fff"/>
+
+  <!-- enemy planes (top) -->
+  <g fill="#7a3030">
+    <rect x="14" y="14" width="6" height="10"/>
+    <rect x="10" y="17" width="14" height="3"/>
+    <rect x="13" y="22" width="8" height="2"/>
+  </g>
+  <rect x="15" y="20" width="4" height="2" fill="#ffb0b0"/>
+
+  <g fill="#444a5a">
+    <rect x="42" y="20" width="8" height="12"/>
+    <rect x="38" y="24" width="16" height="3"/>
+    <rect x="41" y="30" width="10" height="2"/>
+  </g>
+  <rect x="44" y="22" width="4" height="3" fill="#a8b0c0"/>
+
+  <!-- bullets -->
+  <rect x="31" y="34" width="2" height="4" fill="#ffd166"/>
+  <rect x="31" y="40" width="2" height="4" fill="#ffd166"/>
+
+  <!-- player plane (P-38 style at bottom) -->
+  <g fill="#3aa1ff">
+    <rect x="22" y="48" width="3" height="14"/>
+    <rect x="39" y="48" width="3" height="14"/>
+    <rect x="18" y="51" width="28" height="3"/>
+    <rect x="25" y="58" width="14" height="2"/>
+    <rect x="29" y="46" width="6" height="14"/>
+  </g>
+  <rect x="30" y="48" width="4" height="6" fill="#7dc4ff"/>
+  <rect x="30" y="44" width="4" height="3" fill="#1c5ea0"/>
+  <!-- white wing stars -->
+  <rect x="20" y="51" width="2" height="2" fill="#fff"/>
+  <rect x="42" y="51" width="2" height="2" fill="#fff"/>
+</svg>

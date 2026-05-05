@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <defs>
+    <linearGradient id="bkbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1230"/>
+      <stop offset="100%" stop-color="#08060f"/>
+    </linearGradient>
+    <linearGradient id="bkpaddle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe39a"/>
+      <stop offset="100%" stop-color="#d99d2a"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="url(#bkbg)" stroke="#43337a" stroke-width="2"/>
+
+  <!-- bricks: 5 rows, partly broken -->
+  <!-- row 1 (red) -->
+  <rect x="6"  y="10" width="9" height="4.5" rx="1.2" fill="#e63946"/>
+  <rect x="16" y="10" width="9" height="4.5" rx="1.2" fill="#e63946"/>
+  <rect x="36" y="10" width="9" height="4.5" rx="1.2" fill="#e63946"/>
+  <rect x="46" y="10" width="9" height="4.5" rx="1.2" fill="#e63946"/>
+  <!-- row 2 (orange) -->
+  <rect x="6"  y="16" width="9" height="4.5" rx="1.2" fill="#f4a261"/>
+  <rect x="26" y="16" width="9" height="4.5" rx="1.2" fill="#f4a261"/>
+  <rect x="36" y="16" width="9" height="4.5" rx="1.2" fill="#f4a261"/>
+  <rect x="46" y="16" width="9" height="4.5" rx="1.2" fill="#f4a261"/>
+  <!-- row 3 (yellow) -->
+  <rect x="16" y="22" width="9" height="4.5" rx="1.2" fill="#f4d03f"/>
+  <rect x="26" y="22" width="9" height="4.5" rx="1.2" fill="#f4d03f"/>
+  <rect x="36" y="22" width="9" height="4.5" rx="1.2" fill="#f4d03f"/>
+  <!-- row 4 (green) -->
+  <rect x="6"  y="28" width="9" height="4.5" rx="1.2" fill="#2dba4e"/>
+  <rect x="46" y="28" width="9" height="4.5" rx="1.2" fill="#2dba4e"/>
+  <!-- row 5 (blue) -->
+  <rect x="26" y="34" width="9" height="4.5" rx="1.2" fill="#3aa1ff"/>
+
+  <!-- ball -->
+  <circle cx="40" cy="48" r="3" fill="#fff"/>
+  <circle cx="40" cy="48" r="5" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="0.6"/>
+
+  <!-- paddle -->
+  <rect x="22" y="54" width="22" height="4" rx="2" fill="url(#bkpaddle)" stroke="#5a3d10" stroke-width="0.6"/>
+</svg>
