@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <defs>
+    <linearGradient id="lbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2230"/>
+      <stop offset="100%" stop-color="#0d1118"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="url(#lbg)" stroke="#2e3a55" stroke-width="2"/>
+  <!-- 4 yards in corners -->
+  <rect x="6"  y="6"  width="22" height="22" rx="3" fill="#e63946"/>
+  <rect x="36" y="6"  width="22" height="22" rx="3" fill="#2dba4e"/>
+  <rect x="6"  y="36" width="22" height="22" rx="3" fill="#3aa1ff"/>
+  <rect x="36" y="36" width="22" height="22" rx="3" fill="#f4d03f"/>
+  <!-- center cross arms -->
+  <rect x="28" y="6"  width="8" height="22" fill="#fafafa" stroke="#0d1118" stroke-width="0.6"/>
+  <rect x="28" y="36" width="8" height="22" fill="#fafafa" stroke="#0d1118" stroke-width="0.6"/>
+  <rect x="6"  y="28" width="22" height="8" fill="#fafafa" stroke="#0d1118" stroke-width="0.6"/>
+  <rect x="36" y="28" width="22" height="8" fill="#fafafa" stroke="#0d1118" stroke-width="0.6"/>
+  <!-- center triangles -->
+  <polygon points="28,28 32,32 28,36" fill="#e63946"/>
+  <polygon points="28,28 36,28 32,32" fill="#2dba4e"/>
+  <polygon points="36,28 36,36 32,32" fill="#f4d03f"/>
+  <polygon points="28,36 32,32 36,36" fill="#3aa1ff"/>
+  <!-- token dots inside yards -->
+  <circle cx="13" cy="13" r="2.6" fill="#fff" stroke="#0d1118" stroke-width="0.6"/>
+  <circle cx="21" cy="13" r="2.6" fill="#fff" stroke="#0d1118" stroke-width="0.6"/>
+  <circle cx="13" cy="21" r="2.6" fill="#fff" stroke="#0d1118" stroke-width="0.6"/>
+  <circle cx="21" cy="21" r="2.6" fill="#fff" stroke="#0d1118" stroke-width="0.6"/>
+  <!-- die in opposite corner -->
+  <rect x="44" y="44" width="14" height="14" rx="2.5" fill="#f4ecd8" stroke="#2a1810" stroke-width="1.4"/>
+  <circle cx="48" cy="48" r="1.4" fill="#2a1810"/>
+  <circle cx="54" cy="48" r="1.4" fill="#2a1810"/>
+  <circle cx="48" cy="54" r="1.4" fill="#2a1810"/>
+  <circle cx="54" cy="54" r="1.4" fill="#2a1810"/>
+  <circle cx="51" cy="51" r="1.4" fill="#2a1810"/>
+</svg>
