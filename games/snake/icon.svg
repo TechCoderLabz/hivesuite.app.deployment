@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="#16221a" stroke="#2e3a55" stroke-width="2"/>
+  <!-- subtle grid -->
+  <g stroke="rgba(255,255,255,0.06)" stroke-width="0.5">
+    <line x1="14" y1="6" x2="14" y2="58"/>
+    <line x1="26" y1="6" x2="26" y2="58"/>
+    <line x1="38" y1="6" x2="38" y2="58"/>
+    <line x1="50" y1="6" x2="50" y2="58"/>
+    <line x1="6" y1="18" x2="58" y2="18"/>
+    <line x1="6" y1="30" x2="58" y2="30"/>
+    <line x1="6" y1="42" x2="58" y2="42"/>
+  </g>
+  <!-- snake -->
+  <g fill="#7df096">
+    <rect x="14" y="34" width="10" height="10" rx="1"/>
+    <rect x="24" y="34" width="10" height="10" rx="1"/>
+    <rect x="34" y="34" width="10" height="10" rx="1"/>
+    <rect x="34" y="24" width="10" height="10" rx="1"/>
+    <rect x="34" y="14" width="10" height="10" rx="1"/>
+  </g>
+  <!-- head with eyes -->
+  <rect x="34" y="14" width="10" height="10" rx="1" fill="#a4f8b3"/>
+  <rect x="36" y="17" width="2" height="2" fill="#0c170f"/>
+  <rect x="40" y="17" width="2" height="2" fill="#0c170f"/>
+  <!-- apple -->
+  <circle cx="50" cy="48" r="4" fill="#ff5a5a"/>
+  <rect x="49" y="42" width="1.5" height="3" fill="#3aa14e"/>
+</svg>

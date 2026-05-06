@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="#06080f" stroke="#2e3a55" stroke-width="2"/>
+  <!-- stars -->
+  <g fill="rgba(255,255,255,0.6)">
+    <rect x="8" y="10" width="1.5" height="1.5"/>
+    <rect x="20" y="6" width="1.5" height="1.5"/>
+    <rect x="48" y="9" width="1.5" height="1.5"/>
+    <rect x="36" y="20" width="1.5" height="1.5"/>
+    <rect x="56" y="20" width="1.5" height="1.5"/>
+    <rect x="14" y="30" width="1.5" height="1.5"/>
+  </g>
+  <!-- invaders -->
+  <g>
+    <!-- pink row -->
+    <g fill="#ff8acf">
+      <rect x="12" y="14" width="6" height="4"/>
+      <rect x="10" y="16" width="10" height="4"/>
+      <rect x="11" y="20" width="2" height="2"/><rect x="17" y="20" width="2" height="2"/>
+      <rect x="32" y="14" width="6" height="4"/>
+      <rect x="30" y="16" width="10" height="4"/>
+      <rect x="31" y="20" width="2" height="2"/><rect x="37" y="20" width="2" height="2"/>
+      <rect x="52" y="14" width="6" height="4"/>
+      <rect x="50" y="16" width="10" height="4"/>
+      <rect x="51" y="20" width="2" height="2"/><rect x="57" y="20" width="2" height="2"/>
+    </g>
+    <!-- yellow row -->
+    <g fill="#ffd166">
+      <rect x="22" y="26" width="6" height="4"/>
+      <rect x="20" y="28" width="10" height="4"/>
+      <rect x="42" y="26" width="6" height="4"/>
+      <rect x="40" y="28" width="10" height="4"/>
+    </g>
+    <!-- green row -->
+    <g fill="#7df096">
+      <rect x="12" y="38" width="6" height="3"/>
+      <rect x="10" y="39" width="10" height="3"/>
+      <rect x="32" y="38" width="6" height="3"/>
+      <rect x="30" y="39" width="10" height="3"/>
+      <rect x="52" y="38" width="6" height="3"/>
+      <rect x="50" y="39" width="10" height="3"/>
+    </g>
+  </g>
+  <!-- bullet -->
+  <rect x="31" y="44" width="2" height="6" fill="#ffd166"/>
+  <!-- shields -->
+  <rect x="8" y="50" width="10" height="3" fill="#7df096"/>
+  <rect x="46" y="50" width="10" height="3" fill="#7df096"/>
+  <!-- player ship -->
+  <g fill="#3aa1ff">
+    <rect x="22" y="56" width="20" height="4"/>
+    <rect x="26" y="53" width="12" height="3"/>
+    <rect x="30" y="50" width="4" height="3"/>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="#2e3a55" stroke="#1c2230" stroke-width="2"/>
+  <!-- 5x5 cells (some revealed, some unrevealed) -->
+  <g font-family="ui-monospace, monospace" font-size="6" font-weight="900" text-anchor="middle">
+    <!-- Row 1 -->
+    <rect x="6"  y="6"  width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <text x="11" y="14" fill="#0000a8">1</text>
+    <rect x="17" y="6"  width="10" height="10" fill="#a8b0b8" stroke="#f0f0f0"/>
+    <rect x="28" y="6"  width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <text x="33" y="14" fill="#1f8b3c">2</text>
+    <rect x="39" y="6"  width="10" height="10" fill="#a8b0b8" stroke="#f0f0f0"/>
+    <text x="44" y="14" font-size="6">🚩</text>
+    <rect x="50" y="6"  width="8"  height="10" fill="#a8b0b8" stroke="#f0f0f0"/>
+
+    <!-- Row 2 -->
+    <rect x="6"  y="17" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <rect x="17" y="17" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <text x="22" y="25" fill="#c83030">3</text>
+    <rect x="28" y="17" width="10" height="10" fill="#ff5a5a" stroke="#777e88" stroke-width="0.4"/>
+    <text x="33" y="25" font-size="6">💣</text>
+    <rect x="39" y="17" width="10" height="10" fill="#a8b0b8" stroke="#f0f0f0"/>
+    <rect x="50" y="17" width="8"  height="10" fill="#a8b0b8" stroke="#f0f0f0"/>
+
+    <!-- Row 3 -->
+    <rect x="6"  y="28" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <text x="11" y="36" fill="#0000a8">1</text>
+    <rect x="17" y="28" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <text x="22" y="36" fill="#1f8b3c">2</text>
+    <rect x="28" y="28" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <rect x="39" y="28" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <text x="44" y="36" fill="#0000a8">1</text>
+    <rect x="50" y="28" width="8"  height="10" fill="#a8b0b8" stroke="#f0f0f0"/>
+
+    <!-- Row 4 -->
+    <rect x="6"  y="39" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <rect x="17" y="39" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <rect x="28" y="39" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <rect x="39" y="39" width="10" height="10" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <rect x="50" y="39" width="8"  height="10" fill="#a8b0b8" stroke="#f0f0f0"/>
+
+    <!-- Row 5 -->
+    <rect x="6"  y="50" width="10" height="8" fill="#a8b0b8" stroke="#f0f0f0"/>
+    <text x="11" y="56" font-size="5">🚩</text>
+    <rect x="17" y="50" width="10" height="8" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <rect x="28" y="50" width="10" height="8" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <rect x="39" y="50" width="10" height="8" fill="#d8dde0" stroke="#777e88" stroke-width="0.4"/>
+    <text x="44" y="56" fill="#0000a8">1</text>
+    <rect x="50" y="50" width="8"  height="8" fill="#a8b0b8" stroke="#f0f0f0"/>
+  </g>
+</svg>
