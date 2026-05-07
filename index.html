@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>hivesuite · Hive social inbox & feeds</title>
 
-    <!-- Browser tab icons. Most desktop browsers prefer the SVG; UAs
-         that don't honour SVG fall back to the PNG variants. -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Browser tab icons — uses the same red logo as the PWA icons.
+         Order matters: list logo.png first so browsers pick the
+         high-res app logo for the tab; smaller PNGs are fallbacks. -->
+    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="shortcut icon" href="/logo.png" />
 
     <!-- iOS "Add to Home Screen". Safari ignores `rel="icon"` for
          home-screen bookmarks and looks for `apple-touch-icon`
@@ -42,7 +43,7 @@
          iOS 16.4+ honours `name` / `short_name` / `theme_color` from
          it too. -->
     <link rel="manifest" href="/manifest.webmanifest" />
-    <script type="module" crossorigin src="/assets/index-an9D_JL2.js"></script>
+    <script type="module" crossorigin src="/assets/index-CNxuj4v_.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-qdJQIRs5.css">
   </head>
   <body>
