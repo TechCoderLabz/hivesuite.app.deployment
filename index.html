@@ -2,10 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>hivesuite · Hive social inbox & feeds</title>
-    <script type="module" crossorigin src="/assets/index-BdMCm-K2.js"></script>
+
+    <!-- Browser tab icons. Most desktop browsers prefer the SVG; UAs
+         that don't honour SVG fall back to the PNG variants. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+
+    <!-- iOS "Add to Home Screen". Safari ignores `rel="icon"` for
+         home-screen bookmarks and looks for `apple-touch-icon`
+         specifically. Without these the home-screen tile renders as a
+         screenshot of the page — that's the bug this commit fixes. -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152.png" />
+
+    <!-- When launched from the home-screen tile, run in a chromeless
+         "standalone" web-app shell (no Safari address bar / nav). -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Status-bar styling in standalone mode. `black-translucent` lets
+         the page paint under the status bar — pair with the
+         `viewport-fit=cover` viewport above so the full screen is
+         actually used. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Short label shown under the home-screen icon. Without this iOS
+         derives it from <title>, which is too long. -->
+    <meta name="apple-mobile-web-app-title" content="HiveSuite" />
+    <!-- Generic equivalents honoured by Android / Chromium PWAs. -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="HiveSuite" />
+
+    <!-- Tints the address bar / task-switcher chrome. Matches the
+         in-app dark surface so there's no contrast jump on launch. -->
+    <meta name="theme-color" content="#0d1118" />
+
+    <!-- PWA manifest — Android Chrome reads this for "Install app", and
+         iOS 16.4+ honours `name` / `short_name` / `theme_color` from
+         it too. -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script type="module" crossorigin src="/assets/index-an9D_JL2.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-qdJQIRs5.css">
   </head>
   <body>
