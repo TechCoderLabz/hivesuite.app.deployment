@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6a4878"/>
+      <stop offset="1" stop-color="#3a2848"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a2858"/>
+      <stop offset="1" stop-color="#2a1840"/>
+    </linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1838"/>
+      <stop offset="1" stop-color="#10081a"/>
+    </linearGradient>
+  </defs>
+  <!-- Far range (palest) — gentle rolling silhouette -->
+  <path d="M 0 220
+           L 80 180 L 180 200 L 280 150 L 380 190 L 480 160 L 600 180 L 720 130 L 840 170 L 960 150 L 1080 190 L 1200 160
+           L 1200 300 L 0 300 Z" fill="url(#far)"/>
+  <!-- Snow caps on far range -->
+  <path d="M 270 158 L 280 150 L 290 158 L 285 162 L 275 162 Z" fill="rgba(255,240,220,0.5)"/>
+  <path d="M 710 138 L 720 130 L 730 138 L 725 142 L 715 142 Z" fill="rgba(255,240,220,0.5)"/>
+  <!-- Mid range — taller jagged peaks -->
+  <path d="M 0 250
+           L 60 200 L 140 240 L 230 180 L 340 220 L 440 170 L 560 210 L 680 160 L 800 200 L 920 170 L 1060 210 L 1200 180
+           L 1200 300 L 0 300 Z" fill="url(#mid)"/>
+  <path d="M 220 188 L 230 180 L 240 188 L 235 192 L 225 192 Z" fill="rgba(255,240,220,0.4)"/>
+  <path d="M 430 178 L 440 170 L 450 178 L 445 182 L 435 182 Z" fill="rgba(255,240,220,0.4)"/>
+  <!-- Near range (darkest) — chunky foreground hills -->
+  <path d="M 0 270
+           L 100 240 L 200 260 L 320 220 L 460 250 L 600 230 L 740 250 L 880 220 L 1020 240 L 1200 220
+           L 1200 300 L 0 300 Z" fill="url(#near)"/>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5a2810"/>
+      <stop offset="0.5" stop-color="#a25a20"/>
+      <stop offset="1" stop-color="#5a2810"/>
+    </linearGradient>
+    <linearGradient id="grip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a1408"/>
+      <stop offset="0.5" stop-color="#5a3018"/>
+      <stop offset="1" stop-color="#2a1408"/>
+    </linearGradient>
+  </defs>
+  <!-- Bow limb (a thicker C-shape facing right) -->
+  <!-- Outer wood layer -->
+  <path d="M 38 6
+           C 70 18 70 82 38 94
+           L 38 86
+           C 60 78 60 22 38 14
+           Z" fill="url(#wood)" stroke="#3a1a08" stroke-width="1"/>
+  <!-- Inner wood highlight running along the limb -->
+  <path d="M 42 14
+           C 56 22 56 78 42 86"
+        stroke="#cc8848" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.55"/>
+  <!-- Bow tips (notches where the string anchors) -->
+  <circle cx="38" cy="6" r="3" fill="#3a1a08"/>
+  <circle cx="38" cy="94" r="3" fill="#3a1a08"/>
+  <!-- Grip wrap (leather-bound center) -->
+  <rect x="32" y="40" width="14" height="20" fill="url(#grip)" rx="2"/>
+  <!-- Grip diagonal stitching lines for texture -->
+  <line x1="33" y1="42" x2="45" y2="46" stroke="rgba(255,255,255,0.18)" stroke-width="0.8"/>
+  <line x1="33" y1="48" x2="45" y2="52" stroke="rgba(255,255,255,0.18)" stroke-width="0.8"/>
+  <line x1="33" y1="54" x2="45" y2="58" stroke="rgba(255,255,255,0.18)" stroke-width="0.8"/>
+  <!-- Arrow rest notch (small indent on the side facing the target) -->
+  <rect x="44" y="48" width="3" height="4" fill="#1a0e04"/>
+</svg>

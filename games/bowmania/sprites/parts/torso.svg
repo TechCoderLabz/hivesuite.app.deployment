@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 120" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="linen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a6850"/>
+      <stop offset="0.5" stop-color="#a89478"/>
+      <stop offset="1" stop-color="#5a4a38"/>
+    </linearGradient>
+    <linearGradient id="vest" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3a1f10"/>
+      <stop offset="0.5" stop-color="#7a3f1c"/>
+      <stop offset="1" stop-color="#2a1408"/>
+    </linearGradient>
+    <linearGradient id="belt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0e04"/>
+      <stop offset="0.5" stop-color="#3a2010"/>
+      <stop offset="1" stop-color="#0a0402"/>
+    </linearGradient>
+  </defs>
+  <!-- Linen undershirt — slightly wider at the shoulders, tapering to the
+       waist. Visible under the vest at the collar and arms. -->
+  <path d="M 8 16
+           Q 8 8 18 8
+           L 62 8
+           Q 72 8 72 16
+           L 72 102
+           Q 72 110 64 110
+           L 16 110
+           Q 8 110 8 102 Z" fill="url(#linen)"/>
+  <!-- Linen subtle weave shading on left -->
+  <path d="M 8 16 Q 8 8 18 8 L 40 8 L 40 110 L 16 110 Q 8 110 8 102 Z" fill="rgba(0,0,0,0.16)"/>
+  <!-- Leather vest — covers chest + abdomen, leaves shoulders/arms in linen -->
+  <path d="M 16 22
+           L 64 22
+           L 66 30
+           L 66 96
+           L 14 96
+           L 14 30 Z" fill="url(#vest)"/>
+  <!-- Vest shadow on left side -->
+  <path d="M 16 22 L 40 22 L 40 96 L 14 96 L 14 30 Z" fill="rgba(0,0,0,0.22)"/>
+  <!-- V-neck of vest exposing linen underneath -->
+  <path d="M 30 22 L 40 44 L 50 22 Z" fill="#a89478"/>
+  <path d="M 30 22 L 40 44 L 50 22 Z" fill="rgba(0,0,0,0.12)"/>
+  <!-- Vest stitching along center seam -->
+  <line x1="40" y1="44" x2="40" y2="92" stroke="rgba(0,0,0,0.35)" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- Vest lacing -->
+  <path d="M 36 50 L 44 52 M 36 56 L 44 58 M 36 62 L 44 64 M 36 68 L 44 70 M 36 74 L 44 76"
+        stroke="rgba(255,220,180,0.4)" stroke-width="0.8" fill="none"/>
+  <!-- Belt -->
+  <rect x="12" y="92" width="56" height="10" fill="url(#belt)"/>
+  <!-- Belt buckle -->
+  <rect x="36" y="91" width="10" height="13" fill="#a07820" stroke="#5a3a18" stroke-width="1"/>
+  <rect x="38" y="93" width="6" height="9" fill="#dca830"/>
+  <line x1="41" y1="91" x2="41" y2="104" stroke="#5a3a18" stroke-width="0.8"/>
+  <!-- Belt rivets -->
+  <circle cx="20" cy="97" r="1.2" fill="#5a3a18"/>
+  <circle cx="60" cy="97" r="1.2" fill="#5a3a18"/>
+  <!-- Vest highlight on right shoulder -->
+  <path d="M 60 24 Q 66 30 66 50" stroke="rgba(255,220,180,0.18)" stroke-width="2" fill="none"/>
+  <!-- Collar shadow under chin -->
+  <ellipse cx="40" cy="14" rx="14" ry="3" fill="rgba(0,0,0,0.3)"/>
+</svg>

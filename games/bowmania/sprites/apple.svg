@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="apple-body" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#ff7a72"/>
+      <stop offset="0.45" stop-color="#dc3030"/>
+      <stop offset="1" stop-color="#7a1010"/>
+    </radialGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5aa84a"/>
+      <stop offset="1" stop-color="#1d4f1f"/>
+    </linearGradient>
+    <linearGradient id="stem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a4a20"/>
+      <stop offset="1" stop-color="#3a230f"/>
+    </linearGradient>
+  </defs>
+  <!-- Apple body — slightly squished sphere with a notch at the top -->
+  <path d="M 30 14
+           Q 6 14 6 38
+           Q 6 64 30 64
+           Q 54 64 54 38
+           Q 54 14 30 14 Z" fill="url(#apple-body)"/>
+  <!-- Top notch (slight indent for the stem) -->
+  <ellipse cx="30" cy="18" rx="6" ry="3" fill="rgba(0,0,0,0.25)"/>
+  <!-- Stem -->
+  <path d="M 28 8 L 30 18 L 32 8 Q 32 5 30 5 Q 28 5 28 8 Z" fill="url(#stem)"/>
+  <!-- Leaf -->
+  <path d="M 32 10 Q 48 4 50 16 Q 44 22 32 14 Z" fill="url(#leaf)"/>
+  <path d="M 34 12 Q 42 10 48 14" stroke="rgba(0,0,0,0.25)" stroke-width="1" fill="none"/>
+  <!-- Highlight -->
+  <ellipse cx="18" cy="26" rx="6" ry="9" fill="rgba(255,255,255,0.45)" transform="rotate(-25 18 26)"/>
+  <ellipse cx="14" cy="30" rx="2" ry="3" fill="rgba(255,255,255,0.85)" transform="rotate(-25 14 30)"/>
+  <!-- Bottom shadow -->
+  <ellipse cx="30" cy="58" rx="20" ry="5" fill="rgba(0,0,0,0.22)"/>
+</svg>

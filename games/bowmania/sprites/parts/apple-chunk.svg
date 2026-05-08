@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="chunk-skin" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ff7a72"/>
+      <stop offset="0.5" stop-color="#dc3030"/>
+      <stop offset="1" stop-color="#5a1010"/>
+    </radialGradient>
+    <radialGradient id="chunk-flesh" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0" stop-color="#fffbe8"/>
+      <stop offset="0.6" stop-color="#f0e0a8"/>
+      <stop offset="1" stop-color="#a08850"/>
+    </radialGradient>
+  </defs>
+  <!-- Irregular wedge — red skin on the curved outer edge, white flesh
+       inside, with a darker bite-edge to read as torn/broken. -->
+  <path d="M 4 16
+           Q 6 4 18 4
+           Q 26 6 26 14
+           L 22 22
+           L 12 26
+           Z" fill="url(#chunk-flesh)" stroke="rgba(120,80,40,0.5)" stroke-width="0.6"/>
+  <!-- Red skin strip along outer curve -->
+  <path d="M 4 16 Q 6 4 18 4 Q 26 6 26 14
+           Q 22 8 14 8 Q 8 10 6 16 Z" fill="url(#chunk-skin)"/>
+  <!-- Seed -->
+  <ellipse cx="15" cy="16" rx="1.5" ry="2.5" fill="#3a1a08" transform="rotate(-15 15 16)"/>
+  <!-- Flesh highlight -->
+  <ellipse cx="14" cy="14" rx="3" ry="2" fill="rgba(255,255,255,0.4)"/>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="snow-far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a8c4dc"/>
+      <stop offset="0.6" stop-color="#5878a0"/>
+      <stop offset="1" stop-color="#2a4068"/>
+    </linearGradient>
+    <linearGradient id="snow-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7898c0"/>
+      <stop offset="0.5" stop-color="#3a5478"/>
+      <stop offset="1" stop-color="#182840"/>
+    </linearGradient>
+    <linearGradient id="snow-near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a5478"/>
+      <stop offset="0.5" stop-color="#1c2c4a"/>
+      <stop offset="1" stop-color="#080e1c"/>
+    </linearGradient>
+    <linearGradient id="snowcap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c8d8ec"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Far range — pale, soft, sharp jagged peaks (high alpine) -->
+  <path d="M 0 240
+           L 60 130 L 110 200 L 160 110 L 220 180 L 280 90  L 340 170
+           L 400 100 L 470 180 L 540 80 L 610 160 L 680 70 L 750 150
+           L 820 90 L 890 170 L 960 110 L 1030 200 L 1090 130 L 1200 200
+           L 1200 300 L 0 300 Z" fill="url(#snow-far)"/>
+  <!-- Far range snow caps -->
+  <g fill="url(#snowcap)" opacity="0.9">
+    <path d="M 150 120 L 160 110 L 175 130 L 168 138 L 155 138 Z"/>
+    <path d="M 270 100 L 280 90 L 295 112 L 287 120 L 273 120 Z"/>
+    <path d="M 390 110 L 400 100 L 415 122 L 407 130 L 393 130 Z"/>
+    <path d="M 530 90 L 540 80 L 555 102 L 547 110 L 533 110 Z"/>
+    <path d="M 670 80 L 680 70 L 695 92 L 687 100 L 673 100 Z"/>
+    <path d="M 810 100 L 820 90 L 835 112 L 827 120 L 813 120 Z"/>
+    <path d="M 950 120 L 960 110 L 975 132 L 967 140 L 953 140 Z"/>
+    <path d="M 1080 140 L 1090 130 L 1105 152 L 1097 160 L 1083 160 Z"/>
+  </g>
+
+  <!-- Mid range — taller, more massive peaks -->
+  <path d="M 0 270
+           L 80 190 L 150 240 L 230 150 L 310 220 L 390 140 L 470 210
+           L 550 130 L 630 200 L 710 120 L 790 200 L 870 140 L 950 220
+           L 1030 160 L 1100 230 L 1200 180
+           L 1200 300 L 0 300 Z" fill="url(#snow-mid)"/>
+  <!-- Mid range snow caps -->
+  <g fill="url(#snowcap)" opacity="0.85">
+    <path d="M 220 160 L 230 150 L 245 172 L 237 180 L 223 180 Z"/>
+    <path d="M 380 150 L 390 140 L 405 162 L 397 170 L 383 170 Z"/>
+    <path d="M 540 140 L 550 130 L 565 152 L 557 160 L 543 160 Z"/>
+    <path d="M 700 130 L 710 120 L 725 142 L 717 150 L 703 150 Z"/>
+    <path d="M 860 150 L 870 140 L 885 162 L 877 170 L 863 170 Z"/>
+  </g>
+
+  <!-- Near range — chunky foreground, deeper shadows -->
+  <path d="M 0 290
+           L 100 230 L 200 270 L 320 210 L 460 250 L 600 220 L 740 250
+           L 880 200 L 1020 240 L 1200 210
+           L 1200 300 L 0 300 Z" fill="url(#snow-near)"/>
+  <!-- Snow drift highlights along the near range tops -->
+  <g fill="rgba(220, 235, 255, 0.55)">
+    <path d="M 95 232 Q 100 228 105 232 L 102 238 L 98 238 Z"/>
+    <path d="M 315 212 Q 320 208 325 212 L 322 220 L 318 220 Z"/>
+    <path d="M 595 222 Q 600 218 605 222 L 602 228 L 598 228 Z"/>
+    <path d="M 875 202 Q 880 198 885 202 L 882 210 L 878 210 Z"/>
+  </g>
+
+  <!-- A few scattered conifers as silhouettes on the near range -->
+  <g fill="rgba(10,18,32,0.85)">
+    <path d="M 120 248 L 124 240 L 128 248 L 126 248 L 126 254 L 122 254 L 122 248 Z"/>
+    <path d="M 350 230 L 355 220 L 360 230 L 357 230 L 357 238 L 353 238 L 353 230 Z"/>
+    <path d="M 620 240 L 625 230 L 630 240 L 627 240 L 627 246 L 623 246 L 623 240 Z"/>
+    <path d="M 900 218 L 905 208 L 910 218 L 907 218 L 907 226 L 903 226 L 903 218 Z"/>
+  </g>
+</svg>

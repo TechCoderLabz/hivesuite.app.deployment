@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 16" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a3818"/>
+      <stop offset="0.5" stop-color="#8a5828"/>
+      <stop offset="1" stop-color="#3a2010"/>
+    </linearGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dadde0"/>
+      <stop offset="0.5" stop-color="#9a9da0"/>
+      <stop offset="1" stop-color="#5a5d60"/>
+    </linearGradient>
+  </defs>
+  <!-- Wooden shaft -->
+  <rect x="8" y="6" width="56" height="4" fill="url(#shaft)"/>
+  <!-- Subtle binding wraps near the head -->
+  <line x1="56" y1="5" x2="56" y2="11" stroke="#1a0e04" stroke-width="0.8"/>
+  <line x1="58" y1="5" x2="58" y2="11" stroke="#1a0e04" stroke-width="0.8"/>
+  <!-- Metal arrowhead (triangular tip with edge highlight) -->
+  <polygon points="64,6 64,10 76,8" fill="url(#head)"/>
+  <polygon points="64,6 64,10 76,8" fill="none" stroke="#3a3d40" stroke-width="0.6"/>
+  <line x1="64" y1="8" x2="76" y2="8" stroke="rgba(255,255,255,0.55)" stroke-width="0.5"/>
+  <!-- Feather fletching (two stylized vanes) — red top, lighter red bottom for depth -->
+  <path d="M 0 8 L 12 4 L 12 8 L 8 8 Z" fill="#a82424"/>
+  <path d="M 0 8 L 12 12 L 12 8 L 8 8 Z" fill="#7a1818"/>
+  <!-- Nock (notch at the very back) -->
+  <rect x="0" y="7" width="3" height="2" fill="#1a0e04"/>
+</svg>

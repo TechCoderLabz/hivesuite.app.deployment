@@ -1,0 +1,297 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 180" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Skin: warm Mediterranean tone, multi-stop for sculpted shading -->
+    <radialGradient id="skin" cx="0.4" cy="0.4" r="0.85">
+      <stop offset="0" stop-color="#f4d8b0"/>
+      <stop offset="0.45" stop-color="#d4a578"/>
+      <stop offset="0.85" stop-color="#9a6638"/>
+      <stop offset="1" stop-color="#5a3a1c"/>
+    </radialGradient>
+    <linearGradient id="skin-shade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="rgba(40,20,10,0.45)"/>
+      <stop offset="0.5" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="1" stop-color="rgba(40,20,10,0.25)"/>
+    </linearGradient>
+    <!-- Linen shirt: coarse cream fabric -->
+    <linearGradient id="linen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5a4830"/>
+      <stop offset="0.5" stop-color="#b8a380"/>
+      <stop offset="1" stop-color="#3a2e1c"/>
+    </linearGradient>
+    <linearGradient id="linen-vert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="0.7" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0.3)"/>
+    </linearGradient>
+    <!-- Leather vest: dark cordovan with warm highlights -->
+    <linearGradient id="vest" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a1408"/>
+      <stop offset="0.5" stop-color="#7a3818"/>
+      <stop offset="1" stop-color="#1a0a04"/>
+    </linearGradient>
+    <linearGradient id="vest-vert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,200,150,0.12)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0.3)"/>
+    </linearGradient>
+    <!-- Wool breeches -->
+    <linearGradient id="pants" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a0e08"/>
+      <stop offset="0.5" stop-color="#4a3322"/>
+      <stop offset="1" stop-color="#0a0402"/>
+    </linearGradient>
+    <!-- Leather boot -->
+    <linearGradient id="boot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a1f0c"/>
+      <stop offset="0.6" stop-color="#5a2c12"/>
+      <stop offset="1" stop-color="#0a0402"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1408"/>
+      <stop offset="1" stop-color="#0a0402"/>
+    </linearGradient>
+    <radialGradient id="cheek" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="rgba(220,90,80,0.32)"/>
+      <stop offset="1" stop-color="rgba(220,90,80,0)"/>
+    </radialGradient>
+    <!-- Soft shadow under the feet -->
+    <radialGradient id="ground-shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="rgba(0,0,0,0.5)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============== LEGS / BOOTS ============== -->
+  <!-- Drawn first so the torso/vest overlap them naturally at the waist -->
+  <!-- Right leg (further leg, slightly back for stance asymmetry) -->
+  <path d="M 56 96
+           Q 58 98 58 104
+           L 60 158
+           Q 60 162 56 162
+           L 51 162
+           Q 49 162 49 158
+           L 50 102
+           Q 50 96 53 95 Z"
+        fill="url(#pants)"/>
+  <!-- Right leg knee crease -->
+  <path d="M 50 130 Q 54 132 59 130" stroke="rgba(0,0,0,0.4)" stroke-width="0.8" fill="none"/>
+  <!-- Right boot -->
+  <path d="M 49 158
+           L 60 158
+           Q 63 160 64 168
+           Q 64 173 60 173
+           L 48 173
+           Q 46 173 46 168
+           Q 47 161 49 158 Z" fill="url(#boot)"/>
+  <path d="M 60 168 Q 64 169 64 171 Q 63 173 60 173 Z" fill="#0a0402"/>
+  <!-- Right boot stitch -->
+  <path d="M 47 164 L 63 164" stroke="rgba(255,200,150,0.18)" stroke-width="0.5"/>
+
+  <!-- Left leg (forward leg) -->
+  <path d="M 44 96
+           Q 42 98 42 104
+           L 40 158
+           Q 40 162 44 162
+           L 49 162
+           Q 51 162 51 158
+           L 50 102
+           Q 50 96 47 95 Z"
+        fill="url(#pants)"/>
+  <!-- Left leg shadow -->
+  <path d="M 42 104 L 41 158 L 44 158 L 45 104 Z" fill="rgba(0,0,0,0.28)"/>
+  <!-- Left leg knee crease -->
+  <path d="M 41 128 Q 45 130 50 128" stroke="rgba(0,0,0,0.4)" stroke-width="0.8" fill="none"/>
+  <!-- Left boot -->
+  <path d="M 40 158
+           L 51 158
+           Q 53 161 53 168
+           Q 53 173 49 173
+           L 38 173
+           Q 36 173 36 168
+           Q 37 160 40 158 Z" fill="url(#boot)"/>
+  <path d="M 50 168 Q 53 169 53 171 Q 52 173 49 173 Z" fill="#0a0402"/>
+  <path d="M 37 164 L 53 164" stroke="rgba(255,200,150,0.18)" stroke-width="0.5"/>
+
+  <!-- Ground shadow under the feet (drawn behind boots for soft contact) -->
+  <ellipse cx="50" cy="174" rx="22" ry="3" fill="url(#ground-shadow)"/>
+
+  <!-- ============== TORSO ============== -->
+  <!-- Linen shirt — visible at neckline, sleeves, and below the vest hem -->
+  <!-- Shirt main body. Trapezoidal: wider at shoulders, tapers to waist -->
+  <path d="M 24 56
+           Q 22 50 30 46
+           L 70 46
+           Q 78 50 76 56
+           L 74 100
+           Q 72 104 66 104
+           L 34 104
+           Q 28 104 26 100 Z"
+        fill="url(#linen)"/>
+  <!-- Vertical lighting overlay for fabric depth -->
+  <path d="M 24 56 Q 22 50 30 46 L 70 46 Q 78 50 76 56 L 74 100 Q 72 104 66 104 L 34 104 Q 28 104 26 100 Z"
+        fill="url(#linen-vert)"/>
+
+  <!-- ============== ARMS (integrated with shoulders) ============== -->
+  <!-- Right arm — drawn behind torso first so the vest overlaps the shoulder -->
+  <!-- Right shoulder lump (anatomical deltoid bulge) -->
+  <ellipse cx="74" cy="54" rx="10" ry="9" fill="url(#linen)"/>
+  <!-- Right upper arm + forearm in one curving path -->
+  <path d="M 78 56
+           Q 84 58 84 66
+           L 82 96
+           Q 80 100 76 100
+           L 72 100
+           Q 70 100 70 96
+           L 70 64
+           Q 70 58 73 56 Z"
+        fill="url(#linen)"/>
+  <!-- Right arm shading -->
+  <path d="M 78 56 Q 84 58 84 66 L 83 96 Q 81 100 79 100 L 79 56 Z"
+        fill="rgba(0,0,0,0.18)"/>
+  <!-- Right cuff -->
+  <rect x="70" y="98" width="14" height="3" fill="#3a2818"/>
+  <!-- Right hand -->
+  <ellipse cx="77" cy="106" rx="6" ry="6" fill="url(#skin)"/>
+  <!-- Right hand knuckle shading -->
+  <path d="M 73 106 Q 77 108 81 106" stroke="rgba(80,40,20,0.4)" stroke-width="0.6" fill="none"/>
+
+  <!-- Left arm — drawn similarly, the player typically sees this side closer -->
+  <ellipse cx="26" cy="54" rx="10" ry="9" fill="url(#linen)"/>
+  <path d="M 22 56
+           Q 16 58 16 66
+           L 18 96
+           Q 20 100 24 100
+           L 28 100
+           Q 30 100 30 96
+           L 30 64
+           Q 30 58 27 56 Z"
+        fill="url(#linen)"/>
+  <!-- Left arm shadow -->
+  <path d="M 22 56 Q 16 58 16 66 L 17 96 Q 19 100 21 100 L 21 56 Z"
+        fill="rgba(0,0,0,0.32)"/>
+  <rect x="16" y="98" width="14" height="3" fill="#3a2818"/>
+  <ellipse cx="23" cy="106" rx="6" ry="6" fill="url(#skin)"/>
+  <path d="M 19 106 Q 23 108 27 106" stroke="rgba(80,40,20,0.4)" stroke-width="0.6" fill="none"/>
+
+  <!-- ============== LEATHER VEST ============== -->
+  <!-- Vest covers chest + abdomen but leaves arms in linen.
+       Wider at shoulders, tapers slightly to waist. -->
+  <path d="M 32 54
+           L 68 54
+           Q 72 58 72 64
+           L 70 100
+           Q 68 102 64 102
+           L 36 102
+           Q 32 102 30 100
+           L 28 64
+           Q 28 58 32 54 Z"
+        fill="url(#vest)"/>
+  <!-- Vest highlight overlay -->
+  <path d="M 32 54 L 68 54 Q 72 58 72 64 L 70 100 Q 68 102 64 102 L 36 102 Q 32 102 30 100 L 28 64 Q 28 58 32 54 Z"
+        fill="url(#vest-vert)"/>
+  <!-- Vest left-side shadow for volume -->
+  <path d="M 32 54 L 50 54 L 50 102 L 36 102 Q 32 102 30 100 L 28 64 Q 28 58 32 54 Z"
+        fill="rgba(0,0,0,0.28)"/>
+  <!-- V-neck opening showing linen underneath -->
+  <path d="M 42 54 L 50 76 L 58 54 Z" fill="#a89478"/>
+  <path d="M 42 54 L 50 76 L 58 54 Z" fill="rgba(0,0,0,0.18)"/>
+  <!-- Vest center seam (stitching) -->
+  <line x1="50" y1="76" x2="50" y2="100" stroke="rgba(0,0,0,0.4)" stroke-width="0.6" stroke-dasharray="2,1.5"/>
+  <!-- Vest lacing / cross-stitch -->
+  <path d="M 47 80 L 53 82 M 47 84 L 53 86 M 47 88 L 53 90 M 47 92 L 53 94"
+        stroke="rgba(255,210,160,0.45)" stroke-width="0.6" fill="none"/>
+  <!-- Vest edge stitching along outer borders -->
+  <path d="M 32 56 Q 30 60 30 64 L 31 99" stroke="rgba(255,210,160,0.2)" stroke-width="0.5" fill="none"/>
+  <path d="M 68 56 Q 70 60 70 64 L 69 99" stroke="rgba(255,210,160,0.2)" stroke-width="0.5" fill="none"/>
+
+  <!-- ============== BELT ============== -->
+  <rect x="28" y="98" width="44" height="8" fill="#1a0e04"/>
+  <rect x="28" y="98" width="44" height="2" fill="rgba(255,210,160,0.15)"/>
+  <rect x="28" y="104" width="44" height="2" fill="rgba(0,0,0,0.4)"/>
+  <!-- Belt buckle -->
+  <rect x="46" y="97" width="8" height="10" fill="#a07820" stroke="#3a2010" stroke-width="0.6"/>
+  <rect x="48" y="99" width="4" height="6" fill="#dca830"/>
+  <line x1="50" y1="97" x2="50" y2="107" stroke="#3a2010" stroke-width="0.5"/>
+  <!-- Belt rivets -->
+  <circle cx="34" cy="102" r="1" fill="#5a3a18"/>
+  <circle cx="66" cy="102" r="1" fill="#5a3a18"/>
+
+  <!-- ============== NECK ============== -->
+  <path d="M 44 36 L 56 36 L 55 50 Q 52 52 50 52 Q 48 52 45 50 Z"
+        fill="url(#skin)"/>
+  <!-- Neck shadow under jaw -->
+  <ellipse cx="50" cy="38" rx="8" ry="2" fill="rgba(60,30,10,0.45)"/>
+
+  <!-- ============== HEAD ============== -->
+  <!-- Slightly oval skull with chin tapering — proportions adjusted for
+       a more realistic adult face (head ~1/7 of body height). -->
+  <path d="M 32 22
+           Q 32 6 50 5
+           Q 68 6 68 22
+           L 68 32
+           Q 68 38 64 42
+           Q 60 46 56 46
+           L 44 46
+           Q 40 46 36 42
+           Q 32 38 32 32 Z"
+        fill="url(#skin)"/>
+  <!-- Form shadow on left half of face for 3/4 lighting -->
+  <path d="M 32 22 Q 32 6 50 5 L 50 46 L 44 46 Q 40 46 36 42 Q 32 38 32 32 Z"
+        fill="url(#skin-shade)"/>
+
+  <!-- Ear -->
+  <path d="M 30 26 Q 27 28 28 34 Q 30 38 33 36 L 33 26 Z" fill="#b88560"/>
+  <ellipse cx="30" cy="31" rx="1.2" ry="2.5" fill="rgba(60,30,10,0.5)"/>
+
+  <!-- Hair — short, slightly tousled medieval cut -->
+  <path d="M 30 24
+           Q 30 4 50 3
+           Q 70 4 70 24
+           L 68 16
+           Q 64 9 56 9
+           L 44 9
+           Q 36 9 32 16 Z"
+        fill="url(#hair)"/>
+  <!-- Hair fringe over forehead -->
+  <path d="M 34 14 Q 40 10 50 13 Q 60 10 66 14 L 66 22 Q 56 16 50 18 Q 44 16 34 22 Z"
+        fill="#0a0402"/>
+
+  <!-- Eyebrows — strong, angular -->
+  <path d="M 36 24 Q 41 21 46 23" stroke="#1a0a04" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 54 23 Q 59 21 64 24" stroke="#1a0a04" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Eyes — almond shape with iris detail -->
+  <ellipse cx="42" cy="28" rx="3" ry="2" fill="#fff8e0"/>
+  <ellipse cx="58" cy="28" rx="3" ry="2" fill="#fff8e0"/>
+  <circle cx="42" cy="28" r="1.5" fill="#3a2818"/>
+  <circle cx="58" cy="28" r="1.5" fill="#3a2818"/>
+  <circle cx="41.5" cy="27.5" r="0.6" fill="#fff"/>
+  <circle cx="57.5" cy="27.5" r="0.6" fill="#fff"/>
+  <!-- Lower eyelid shadow -->
+  <path d="M 39 30 Q 42 31 45 30" stroke="rgba(60,30,10,0.4)" stroke-width="0.5" fill="none"/>
+  <path d="M 55 30 Q 58 31 61 30" stroke="rgba(60,30,10,0.4)" stroke-width="0.5" fill="none"/>
+
+  <!-- Nose — bridge shadow + nostril -->
+  <path d="M 49 30 Q 47 36 49 40 Q 48 41 47 41" stroke="rgba(80,40,20,0.5)" stroke-width="1" fill="none"/>
+  <path d="M 51 30 Q 53 36 51 40" stroke="rgba(255,210,160,0.3)" stroke-width="0.5" fill="none"/>
+  <ellipse cx="48" cy="40" rx="1.2" ry="0.8" fill="rgba(60,30,10,0.5)"/>
+  <ellipse cx="52" cy="40" rx="1.2" ry="0.8" fill="rgba(60,30,10,0.5)"/>
+
+  <!-- Cheek blush -->
+  <ellipse cx="36" cy="34" rx="3" ry="2" fill="url(#cheek)"/>
+  <ellipse cx="64" cy="34" rx="3" ry="2" fill="url(#cheek)"/>
+
+  <!-- Mouth — relaxed, slight downward at corners for serious expression -->
+  <path d="M 45 42 Q 50 44 55 42" stroke="#5a2018" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <!-- Upper lip shadow -->
+  <path d="M 45 41 Q 50 43 55 41" stroke="rgba(80,30,20,0.4)" stroke-width="0.5" fill="none"/>
+  <!-- Chin dimple -->
+  <ellipse cx="50" cy="45" rx="1" ry="0.6" fill="rgba(80,40,20,0.3)"/>
+
+  <!-- Beard stubble -->
+  <ellipse cx="42" cy="42" rx="6" ry="1.6" fill="rgba(40,20,10,0.22)"/>
+  <ellipse cx="58" cy="42" rx="6" ry="1.6" fill="rgba(40,20,10,0.22)"/>
+  <ellipse cx="50" cy="44" rx="8" ry="1.5" fill="rgba(40,20,10,0.18)"/>
+  <!-- Sideburns -->
+  <path d="M 33 24 Q 33 32 36 36" stroke="#1a0a04" stroke-width="1.5" fill="none"/>
+  <path d="M 67 24 Q 67 32 64 36" stroke="#1a0a04" stroke-width="1.5" fill="none"/>
+</svg>
