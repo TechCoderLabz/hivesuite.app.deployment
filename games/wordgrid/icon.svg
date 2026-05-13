@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <!-- WordGrid icon — top row spells WORD in green tiles, second row
+       spells GRID in yellow tiles. Together they read the brand name,
+       and the format mirrors the in-game Wordle-style grid. A third
+       row of empty outlined tiles hints at "the next guess" so it
+       reads as a puzzle, not just a logotype. -->
+  <defs>
+    <linearGradient id="wg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2235"/>
+      <stop offset="100%" stop-color="#0a0f1c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Backdrop rounded square -->
+  <rect x="0" y="0" width="64" height="64" rx="10" fill="url(#wg-bg)"/>
+
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="800"
+     font-size="11" text-anchor="middle" fill="#ffffff">
+
+    <!-- Top row: 4 green tiles spelling WORD -->
+    <g>
+      <rect x="6"  y="10" width="13" height="13" rx="2" fill="#6aaa64"/>
+      <text x="12.5" y="20">W</text>
+    </g>
+    <g>
+      <rect x="20" y="10" width="13" height="13" rx="2" fill="#6aaa64"/>
+      <text x="26.5" y="20">O</text>
+    </g>
+    <g>
+      <rect x="34" y="10" width="13" height="13" rx="2" fill="#6aaa64"/>
+      <text x="40.5" y="20">R</text>
+    </g>
+    <g>
+      <rect x="48" y="10" width="13" height="13" rx="2" fill="#6aaa64"/>
+      <text x="54.5" y="20">D</text>
+    </g>
+
+    <!-- Middle row: 4 yellow tiles spelling GRID -->
+    <g>
+      <rect x="6"  y="25.5" width="13" height="13" rx="2" fill="#c9b458"/>
+      <text x="12.5" y="35.5">G</text>
+    </g>
+    <g>
+      <rect x="20" y="25.5" width="13" height="13" rx="2" fill="#c9b458"/>
+      <text x="26.5" y="35.5">R</text>
+    </g>
+    <g>
+      <rect x="34" y="25.5" width="13" height="13" rx="2" fill="#c9b458"/>
+      <text x="40.5" y="35.5">I</text>
+    </g>
+    <g>
+      <rect x="48" y="25.5" width="13" height="13" rx="2" fill="#c9b458"/>
+      <text x="54.5" y="35.5">D</text>
+    </g>
+
+    <!-- Bottom row: empty outlined tiles (the "next guess") -->
+    <g stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="transparent">
+      <rect x="6"  y="41" width="13" height="13" rx="2"/>
+      <rect x="20" y="41" width="13" height="13" rx="2"/>
+      <rect x="34" y="41" width="13" height="13" rx="2"/>
+      <rect x="48" y="41" width="13" height="13" rx="2"/>
+    </g>
+  </g>
+</svg>
