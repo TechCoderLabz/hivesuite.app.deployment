@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <!-- Dino icon — Chrome-offline-runner T-Rex silhouette on a pale sky
+       with a desert ground line and a tiny cactus. Reads as the
+       browser dino game at a glance. -->
+  <defs>
+    <linearGradient id="dn-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2235"/>
+      <stop offset="100%" stop-color="#0a0f1c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Backdrop rounded square -->
+  <rect x="0" y="0" width="64" height="64" rx="10" fill="url(#dn-sky)"/>
+
+  <!-- Moon (night-mode flavor) -->
+  <circle cx="48" cy="14" r="5" fill="#ffd166"/>
+  <circle cx="46" cy="13" r="5" fill="#1f2235"/>
+
+  <!-- Ground line + dashes -->
+  <line x1="4" y1="48" x2="60" y2="48" stroke="#cfd3da" stroke-width="1.4"/>
+  <g fill="#cfd3da">
+    <rect x="6" y="50" width="6" height="1.4"/>
+    <rect x="22" y="51" width="3" height="1.4"/>
+    <rect x="34" y="50" width="5" height="1.4"/>
+    <rect x="46" y="51" width="6" height="1.4"/>
+  </g>
+
+  <!-- Cactus (small) -->
+  <g fill="#7df096">
+    <rect x="48" y="38" width="3" height="10"/>
+    <rect x="46" y="42" width="2" height="3"/>
+    <rect x="51" y="40" width="2" height="3"/>
+  </g>
+
+  <!-- T-Rex silhouette (chunky pixel-style) -->
+  <g fill="#f0f0f8">
+    <!-- Tail -->
+    <rect x="6" y="34" width="6" height="4"/>
+    <!-- Body -->
+    <rect x="10" y="32" width="14" height="10"/>
+    <!-- Head -->
+    <rect x="22" y="22" width="14" height="14"/>
+    <!-- Snout -->
+    <rect x="34" y="28" width="4" height="4"/>
+    <!-- Eye -->
+    <rect x="30" y="26" width="2" height="2" fill="#1f2235"/>
+    <!-- Arm -->
+    <rect x="20" y="36" width="3" height="4"/>
+    <!-- Legs (mid-stride) -->
+    <rect x="12" y="42" width="4" height="6"/>
+    <rect x="18" y="44" width="4" height="4"/>
+  </g>
+</svg>
