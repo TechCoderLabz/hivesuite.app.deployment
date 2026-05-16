@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>HiveSuite</title>
+    <!--
+      GitHub Pages SPA fallback (rafgraph/spa-github-pages technique).
+
+      GH Pages serves this file with HTTP 404 for any unknown path.
+      We rewrite the URL into a `?/<original-path>` form on `/`, which
+      GH Pages WILL serve (it's just the root + a query string), and
+      the boot script in `index.html` restores the original URL via
+      `history.replaceState` before React mounts so BrowserRouter sees
+      the path the user actually asked for.
+
+      `pathSegmentsToKeep = 0` is correct for a custom-domain deploy
+      (e.g. hivesuite.app). For a project page at
+      https://<user>.github.io/<repo>/ raise to 1.
+    -->
+    <script type="text/javascript">
+      (function () {
+        var pathSegmentsToKeep = 0;
+        var l = window.location;
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+          l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p>HiveSuite requires JavaScript. Please enable JavaScript and reload this page.</p>
+      <p>Visit <a href="https://hivesuite.app/">hivesuite.app</a> for the main site.</p>
+    </noscript>
+  </body>
+</html>

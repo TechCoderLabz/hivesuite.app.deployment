@@ -1,0 +1,94 @@
+# HiveSuite — https://hivesuite.app/
+# We want every crawler that respects robots.txt to index the public app.
+# HiveSuite is a Hive-blockchain social client; all content rendered here is
+# already public on the Hive chain.
+
+# ---------- General search engines ----------
+User-agent: *
+Allow: /
+
+# ---------- Major AI / LLM crawlers (allowed) ----------
+# Listing each one explicitly so policy is obvious rather than relying on
+# the `User-agent: *` fallback that some AI vendors honour, some don't.
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Google AI (Gemini, AI Overviews — separate from regular Googlebot)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft / Bing AI
+User-agent: bingbot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckAssistBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (powers many open datasets used to train LLMs)
+User-agent: CCBot
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# Bytedance / TikTok
+User-agent: Bytespider
+Allow: /
+
+# ---------- Sitemap ----------
+Sitemap: https://hivesuite.app/sitemap.xml

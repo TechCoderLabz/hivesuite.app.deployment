@@ -3,7 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>hivesuite · Hive social inbox & feeds</title>
+    <title>HiveSuite — Hive blockchain social, blogs, videos, shorts, polls, snaps & games</title>
+
+    <!-- ============================================================
+         SEO + social previews
+         The app is a SPA mounted with HashRouter, so every route lives
+         under `/#/...`. That means search-engine and LLM crawlers
+         effectively only see the document served at `/` — make sure
+         this <head> answers "what is HiveSuite?" on its own.
+         ============================================================ -->
+    <meta name="description" content="HiveSuite is a fast, open social app on the Hive blockchain — read & write blogs, snaps, comments and polls, watch videos and shorts, follow communities, manage your wallet, and play 15+ on-chain arcade games. Free, decentralized, ad-free." />
+    <meta name="keywords" content="HiveSuite, Hive blockchain, Hive social, Hive blog app, Hive snaps, Hive videos, Hive shorts, Hive polls, 3Speak, Web3 social, decentralized social, PeakD alternative, Ecency alternative, Hive games, Hive wallet, Hive Keychain" />
+    <meta name="author" content="HiveSuite" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://hivesuite.app/" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Slack, Discord, Telegram, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HiveSuite" />
+    <meta property="og:title" content="HiveSuite — Hive blockchain social, blogs, videos, shorts, polls & games" />
+    <meta property="og:description" content="A fast, open social app on the Hive blockchain. Blogs, snaps, videos, shorts, polls, communities, wallet and 15+ on-chain games — all in one place." />
+    <meta property="og:url" content="https://hivesuite.app/" />
+    <meta property="og:image" content="https://hivesuite.app/icon-512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="HiveSuite app icon" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HiveSuite — Hive blockchain social, blogs, videos, shorts, polls & games" />
+    <meta name="twitter:description" content="Read & write blogs, snaps, polls; watch videos & shorts; manage your Hive wallet; play 15+ on-chain games. All free, decentralized, ad-free." />
+    <meta name="twitter:image" content="https://hivesuite.app/icon-512.png" />
+    <meta name="twitter:image:alt" content="HiveSuite app icon" />
+
+    <!-- JSON-LD structured data so search engines and AI crawlers can
+         parse what HiveSuite is without rendering the React tree.
+         Schema.org WebApplication + Organization + WebSite (with a
+         SearchAction so engines surface in-app search). -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "HiveSuite",
+            "url": "https://hivesuite.app/",
+            "applicationCategory": "SocialNetworkingApplication",
+            "operatingSystem": "Web, iOS, Android",
+            "description": "HiveSuite is a fast, open social app on the Hive blockchain — read & write blogs, snaps, comments and polls, watch videos and shorts, follow communities, manage your wallet, and play 15+ on-chain arcade games.",
+            "image": "https://hivesuite.app/icon-512.png",
+            "browserRequirements": "Requires JavaScript and a modern browser.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "featureList": [
+              "Hive blogs feed and post composer",
+              "Hive snaps (short posts) with media, polls, and replies",
+              "3Speak video uploads, video and shorts feeds",
+              "Communities, friends, and curated feeds",
+              "Polls creation and voting (hPolls)",
+              "Hive wallet — vote, transfer, claim rewards, HP/RC delegation",
+              "Witness and proposal governance (PeakD-style)",
+              "Custom Hive API node management",
+              "15+ on-chain arcade games with leaderboards",
+              "Schedule posts, default beneficiaries, default tags",
+              "Map of posts (WorldMapPin), location picker",
+              "Installable as a Progressive Web App on iOS and Android"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "name": "HiveSuite",
+            "url": "https://hivesuite.app/",
+            "logo": "https://hivesuite.app/logo.png"
+          },
+          {
+            "@type": "WebSite",
+            "name": "HiveSuite",
+            "url": "https://hivesuite.app/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://hivesuite.app/dashboard/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      }
+    </script>
 
     <!-- Browser tab icons — uses the same red logo as the PWA icons.
          Order matters: list logo.png first so browsers pick the
@@ -43,7 +129,41 @@
          iOS 16.4+ honours `name` / `short_name` / `theme_color` from
          it too. -->
     <link rel="manifest" href="/manifest.webmanifest" />
-    <script type="module" crossorigin src="/assets/index-uAi5dtWk.js"></script>
+
+    <!--
+      SPA URL restoration. MUST run before the React bundle so
+      BrowserRouter sees the right path on first mount.
+
+      Two jobs:
+        1. Legacy hash routes (`/#/foo/bar`) published to Hive before we
+           moved off HashRouter — rewrite them to real paths
+           (`/foo/bar`) so old shared links still land on the right
+           page.
+        2. spa-github-pages decode — paths encoded by `/404.html` as
+           `/?/foo/bar` get unwrapped back into `/foo/bar`.
+
+      Both rewrites use `history.replaceState`, so the navigation is
+      not visible to the user and not recorded as a history entry.
+    -->
+    <script type="text/javascript">
+      (function (l) {
+        // 1) Legacy hash-route → real path.
+        if (l.pathname === '/' && l.hash && l.hash.indexOf('#/') === 0) {
+          var hashPath = l.hash.slice(1); // strip leading "#"
+          window.history.replaceState(null, '', hashPath + l.search);
+        }
+        // 2) spa-github-pages decode (set by /404.html).
+        if (l.search && l.search.charAt(1) === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, '',
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+    <script type="module" crossorigin src="/assets/index-DLr-GLfy.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BtIE0voW.css">
   <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body>

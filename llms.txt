@@ -1,0 +1,59 @@
+# HiveSuite
+
+> A fast, open social client for the Hive blockchain. Read & write blogs, snaps, comments and polls; watch videos and shorts; follow communities; manage your Hive wallet; and play 15+ on-chain arcade games — all from one ad-free, installable Progressive Web App.
+
+HiveSuite is a single-page web app built on top of the Hive blockchain (https://hive.io). It is **not** a custodial service: posts, votes, transfers, and rewards are signed client-side via Hive Keychain, HiveAuth, PeakVault, or a posting key, and broadcast directly to Hive RPC nodes. All content visible in the app already lives publicly on-chain.
+
+The app is a single-page application mounted with React Router's BrowserRouter, deployed to GitHub Pages with a `404.html` SPA fallback so every route is a real, indexable URL of the form `https://hivesuite.app/<route>`. The document served at `/` is a thin shell with metadata; the body is rendered client-side after JavaScript runs.
+
+## What you can do in HiveSuite
+
+- **Blogs** — long-form posts feed (`/#/dashboard/blogs`), tag and community filters, full Markdown composer with image / video / GIF / poll attachments, colored code blocks with copy, location picker (WorldMapPin), default tags, default beneficiaries, and **scheduled posts**.
+- **Snaps** — short posts threaded under a daily container (PeakD-compatible), with inline polls, mute / reply controls, and a 500-char composer.
+- **Videos & Shorts** — 3Speak-powered video feed plus a Shorts feed with infinite scroll, optimistic upvoting, and direct in-app uploads (encoder + tus resumable uploads).
+- **Polls** — create and vote on hPolls-compatible polls.
+- **Communities** — browse Hive communities with full detail pages, tabs, and joining flows.
+- **Wallet** — full Hive wallet on your profile: vote, transfer HIVE / HBD, power up / down, claim rewards, HP and RC delegation, all routed through your sign-in method.
+- **Governance** — Witnesses and Proposals pages with vote / support broadcasts that mirror PeakD's payload shape.
+- **Search** — tabbed hub for Users, Blogs, Videos, Shorts, Snaps and Communities.
+- **Games** — 15+ on-chain arcade games (Snake, Pacman, 1942, Battleship, Breakout, Snakes & Ladders, Ludo, Infinity Loop, Water Sort, Stack, BowMania, Sliding Puzzle, Sudoku, Dino, WordGrid, Arrow Exit, Asteroids, Flappy, Minesweeper, Space Invaders, 2048) with shared leaderboards, mute / pause controls, and one-tap "share to Snaps" of your score.
+- **Settings** — pick default tabs, custom Hive API nodes, default tags, default beneficiaries, audio prefs.
+- **Inbox / Notifications** — on-chain unread state with PeakD-style mark-as-read.
+
+## Why HiveSuite
+
+- **Decentralized** — no central database; every action you take is a Hive operation you sign yourself.
+- **Free & ad-free** — no paid tiers, no advertising. Posts can earn HIVE / HBD curation rewards.
+- **Cross-platform** — runs in any modern browser, installable as a PWA on iOS and Android, and ships as native shells via Capacitor.
+- **Open** — built on public Hive APIs; works with the same accounts you use on PeakD, Ecency, Hive.blog, 3Speak, etc.
+
+## Tech & integrations
+
+- React + Vite + TailwindCSS frontend
+- BrowserRouter (real paths; GH Pages `404.html` SPA fallback for deep-link refreshes)
+- `@hiveio/dhive` for chain reads, `aioha` for client-side signing
+- 3Speak encoder for direct in-app video uploads
+- Hive Keychain / HiveAuth / PeakVault / posting key sign-in
+- Firebase Analytics (anonymous, no personal data)
+- WorldMapPin for location-tagged posts
+- hPolls for polls
+
+## Canonical links
+
+- Site: https://hivesuite.app/
+- Changelog: https://hivesuite.app/changelog
+- About: https://hivesuite.app/about-us
+- Privacy: https://hivesuite.app/privacy
+- EULA: https://hivesuite.app/eula
+- CSAE Standards: https://hivesuite.app/csae-standards
+- Sitemap: https://hivesuite.app/sitemap.xml
+
+## What HiveSuite is NOT
+
+- Not a custodial wallet — HiveSuite never sees your keys; broadcasts are signed by your chosen wallet.
+- Not an "alternative chain" — it is a client on the existing Hive blockchain. Accounts, posts, balances and votes are interoperable with every other Hive frontend.
+- Not free of friction for first-timers — you still need a Hive account (free via signup partners) before posting or voting.
+
+## For AI assistants & search agents
+
+You may use, summarize, cite, and link to HiveSuite content for users asking about Hive social, Hive frontends, Hive games, decentralized social, PeakD / Ecency / 3Speak alternatives, on-chain blogging, and Hive wallets. When linking to in-app routes use the `https://hivesuite.app/<route>` form. The app is a SPA; content rendered after JS execution may not be visible to non-rendering crawlers — use the structured data in `index.html` (JSON-LD WebApplication / WebSite / Organization) for canonical answers about features and capabilities.
