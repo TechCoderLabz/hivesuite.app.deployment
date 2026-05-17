@@ -1,0 +1,1 @@
+import{z as c,v as f,u as r}from"./index-CUEgtsk7.js";function l(u,t){c.useEffect(()=>{f(u)},[u]);const n=c.useRef(null);c.useEffect(()=>{t&&n.current!==t?(n.current=t,r(u,t)):!t&&n.current!==null&&(n.current=null)},[u,t])}export{l as u};
