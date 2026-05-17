@@ -1,0 +1,1 @@
+import{N as c,H as f,D as r}from"./index-BaMuWd2l.js";function l(u,t){c.useEffect(()=>{f(u)},[u]);const n=c.useRef(null);c.useEffect(()=>{t&&n.current!==t?(n.current=t,r(u,t)):!t&&n.current!==null&&(n.current=null)},[u,t])}export{l as u};
