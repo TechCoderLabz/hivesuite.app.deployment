@@ -131,6 +131,214 @@
     <link rel="manifest" href="/manifest.webmanifest" />
 
     <!--
+      Hive RPC fetch wrap with auto-failover.
+
+      MUST run before any ESM module loads. `@hiveio/dhive` pulls in
+      `cross-fetch`, whose browser ponyfill captures a reference to
+      `globalThis.fetch` at module-load time. If our wrap is installed
+      via an `import './...interceptor'` at the top of `main.tsx`, ESM
+      evaluation order *should* run it first — but in practice this
+      races with dhive's UMD bundle on the Blogs / dhive-call screens
+      and the wrap gets bypassed. An inline `<script>` here runs
+      synchronously before *any* module, so the wrap is the fetch
+      cross-fetch sees, full stop.
+
+      Behaviour:
+        • Rewrites hardcoded `api.hive.blog` calls (in dhive + kit)
+          to whichever node the user picked in Settings.
+        • Auto-failover on network errors, CORS errors, HTTP ≥ 400
+          (excluding 304). Rotates to the next built-in / custom
+          node, persists the new selection in `localStorage` under
+          `hsnaps-hive-api-node`, dispatches `hivesuite:node-changed`
+          so the Zustand store + Settings UI stay in sync, and
+          retries the request on the new node.
+        • `images.hive.blog` and `/balance-api/...` paths are passed
+          through unchanged.
+
+      The TypeScript interceptor (`src/utils/hiveApiInterceptor.ts`)
+      runs the same logic at module load with a re-entry guard, so
+      this inline copy and the TS copy never double-wrap; whichever
+      runs first wins.
+    -->
+    <script>
+      (function () {
+        if (typeof window === 'undefined' || typeof window.fetch !== 'function') return;
+        if (window.__hiveApiFetchPatched) return;
+        window.__hiveApiFetchPatched = true;
+
+        var SELECTION_KEY = 'hsnaps-hive-api-node';
+        var CUSTOM_KEY = 'hsnaps-hive-api-custom-nodes';
+        var EVENT_NAME = 'hivesuite:node-changed';
+        // Must mirror BUILT_IN_HIVE_NODES in stores/hiveNodeStore.ts.
+        // Order here defines the rotation order.
+        var BUILT_IN = [
+          'https://api.hive.blog',
+          'https://api.syncad.com',
+          'https://api.deathwing.me',
+          'https://hive-api.arcange.eu',
+          'https://api.openhive.network',
+          'https://rpc.mahdiyari.info',
+          'https://hive-api.3speak.tv',
+          'https://anyx.io',
+          'https://techcoderx.com',
+          'https://api.c0ff33a.uk',
+          'https://hive.roelandp.nl',
+        ];
+        var LEGACY_HOST = 'api.hive.blog';
+        var PASSTHROUGH = ['/balance-api/'];
+        var DEFAULT_NODE = 'https://api.hive.blog';
+        var COOLDOWN_MS = 1000;
+        var lastRotation = 0;
+
+        function norm(s) {
+          s = (s || '').trim().replace(/\/+$/, '');
+          if (!s) return '';
+          if (!/^https?:\/\//i.test(s)) s = 'https://' + s;
+          return s;
+        }
+        function readCurrent() {
+          try { var v = localStorage.getItem(SELECTION_KEY); if (v) { var u = norm(v); if (u) return u; } } catch (e) {}
+          return DEFAULT_NODE;
+        }
+        function writeCurrent(url) {
+          try {
+            localStorage.setItem(SELECTION_KEY, url);
+            window.dispatchEvent(new CustomEvent(EVENT_NAME, { detail: url }));
+          } catch (e) {}
+        }
+        function readCustom() {
+          try {
+            var raw = localStorage.getItem(CUSTOM_KEY);
+            if (!raw) return [];
+            var p = JSON.parse(raw);
+            if (!Array.isArray(p)) return [];
+            var out = [];
+            for (var i = 0; i < p.length; i++) {
+              var u = norm(p[i]);
+              if (u) out.push(u);
+            }
+            return out;
+          } catch (e) { return []; }
+        }
+        function hostOf(u) { try { return new URL(u).host; } catch (e) { return ''; } }
+        function pool() {
+          var seen = Object.create(null);
+          var out = [];
+          for (var i = 0; i < BUILT_IN.length; i++) { var u = BUILT_IN[i]; if (!seen[u]) { seen[u] = 1; out.push(u); } }
+          var c = readCustom();
+          for (var j = 0; j < c.length; j++) { var v = c[j]; if (!seen[v]) { seen[v] = 1; out.push(v); } }
+          return out;
+        }
+        function allHosts() {
+          var s = Object.create(null);
+          s[LEGACY_HOST] = 1;
+          var p = pool();
+          for (var i = 0; i < p.length; i++) { var h = hostOf(p[i]); if (h) s[h] = 1; }
+          var ch = hostOf(readCurrent()); if (ch) s[ch] = 1;
+          return s;
+        }
+        function nextNode(failedUrl) {
+          var p = pool();
+          if (p.length === 0) return null;
+          var fh = hostOf(failedUrl);
+          var idx = -1;
+          for (var i = 0; i < p.length; i++) if (hostOf(p[i]) === fh) { idx = i; break; }
+          if (idx === -1) return p[0];
+          for (var k = 1; k < p.length; k++) {
+            var cand = p[(idx + k) % p.length];
+            if (hostOf(cand) !== fh) return cand;
+          }
+          return null;
+        }
+        function rotate(failedUrl) {
+          var cur = readCurrent();
+          var curH = hostOf(cur);
+          var fH = hostOf(failedUrl);
+          var now = Date.now();
+          if (now - lastRotation < COOLDOWN_MS) return cur;
+          if (fH && fH !== curH) return cur;
+          var n = nextNode(fH ? failedUrl : cur);
+          if (!n || hostOf(n) === curH) return cur;
+          lastRotation = now;
+          writeCurrent(n);
+          return n;
+        }
+        function isPass(p) {
+          for (var i = 0; i < PASSTHROUGH.length; i++) if (p.pathname.indexOf(PASSTHROUGH[i]) === 0) return true;
+          return false;
+        }
+        function rewriteLegacy(u) {
+          try {
+            var p = new URL(u);
+            if (p.host !== LEGACY_HOST) return u;
+            if (isPass(p)) return u;
+            var t = new URL(readCurrent());
+            p.protocol = t.protocol; p.host = t.host;
+            return p.toString();
+          } catch (e) { return u; }
+        }
+        function swap(u, nodeUrl) {
+          try {
+            var p = new URL(u);
+            var t = new URL(nodeUrl);
+            p.protocol = t.protocol; p.host = t.host;
+            return p.toString();
+          } catch (e) { return u; }
+        }
+
+        var originalFetch = window.fetch.bind(window);
+        window.fetch = function (input, init) {
+          return (async function () {
+            var origUrl, origReq = null;
+            if (typeof input === 'string') origUrl = input;
+            else if (input instanceof URL) origUrl = input.toString();
+            else if (input && typeof input.url === 'string') { origReq = input; origUrl = input.url; }
+            else return originalFetch(input, init);
+
+            var parsed;
+            try { parsed = new URL(origUrl); } catch (e) { return originalFetch(input, init); }
+            if (isPass(parsed)) return originalFetch(input, init);
+
+            var url = origUrl;
+            if (parsed.host === LEGACY_HOST) url = rewriteLegacy(origUrl);
+
+            var hosts = allHosts();
+            var isRpc = !!hosts[hostOf(url)];
+            function build(u) {
+              if (origReq) return [new Request(u, origReq.clone()), init];
+              return [u, init];
+            }
+            if (!isRpc) { var b0 = build(url); return originalFetch(b0[0], b0[1]); }
+
+            var max = Math.max(1, pool().length);
+            var i = 0, lastErr = null;
+            while (i < max) {
+              i++;
+              var b = build(url);
+              try {
+                var resp = await originalFetch(b[0], b[1]);
+                if (!resp.ok && resp.status !== 304) {
+                  var n = rotate(url);
+                  if (!n || hostOf(n) === hostOf(url)) return resp;
+                  url = swap(url, n);
+                  continue;
+                }
+                return resp;
+              } catch (err) {
+                lastErr = err;
+                var n2 = rotate(url);
+                if (!n2 || hostOf(n2) === hostOf(url)) throw err;
+                url = swap(url, n2);
+                continue;
+              }
+            }
+            throw lastErr || new Error('Hive RPC: all nodes failed');
+          })();
+        };
+      })();
+    </script>
+
+    <!--
       SPA URL restoration. MUST run before the React bundle so
       BrowserRouter sees the right path on first mount.
 
@@ -163,8 +371,8 @@
         }
       })(window.location);
     </script>
-    <script type="module" crossorigin src="/assets/index-esw6o7l_.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CUZR4ZLU.css">
+    <script type="module" crossorigin src="/assets/index-3fuS1g2L.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-KOJJtTEZ.css">
   <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
