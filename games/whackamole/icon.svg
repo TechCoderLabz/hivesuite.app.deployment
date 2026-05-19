@@ -1,0 +1,75 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="wmField" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#2d3d1a" />
+      <stop offset="100%" stop-color="#0d1208" />
+    </radialGradient>
+    <radialGradient id="wmHole" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#070a04" />
+      <stop offset="100%" stop-color="#2d3d1a" />
+    </radialGradient>
+    <linearGradient id="wmHammerHead" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4caa0" />
+      <stop offset="100%" stop-color="#8a7a4c" />
+    </linearGradient>
+    <linearGradient id="wmHammerHandle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7a4a1f" />
+      <stop offset="50%" stop-color="#a86826" />
+      <stop offset="100%" stop-color="#7a4a1f" />
+    </linearGradient>
+  </defs>
+
+  <!-- Field background -->
+  <rect width="256" height="256" rx="38" fill="url(#wmField)" />
+
+  <!-- 3 background holes (atmosphere) -->
+  <ellipse cx="48"  cy="190" rx="22" ry="14" fill="url(#wmHole)" opacity="0.7" />
+  <ellipse cx="208" cy="190" rx="22" ry="14" fill="url(#wmHole)" opacity="0.7" />
+  <ellipse cx="48"  cy="105" rx="22" ry="14" fill="url(#wmHole)" opacity="0.45" />
+
+  <!-- Main hole (center) -->
+  <ellipse cx="128" cy="160" rx="62" ry="38" fill="url(#wmHole)" />
+  <!-- Dirt rim across the front of the hole -->
+  <path d="M70 158 Q128 200 186 158 Q170 192 128 196 Q86 192 70 158 Z" fill="#3a2412" opacity="0.85" />
+
+  <!-- Mole body -->
+  <g transform="translate(128 130)">
+    <!-- Ears -->
+    <ellipse cx="-26" cy="-22" rx="11" ry="14" fill="#8b5a2b" />
+    <ellipse cx="26"  cy="-22" rx="11" ry="14" fill="#8b5a2b" />
+    <ellipse cx="-26" cy="-20" rx="5"  ry="7"  fill="#a36a3f" />
+    <ellipse cx="26"  cy="-20" rx="5"  ry="7"  fill="#a36a3f" />
+    <!-- Head -->
+    <ellipse cx="0" cy="0" rx="40" ry="36" fill="#8b5a2b" />
+    <!-- Belly -->
+    <ellipse cx="0" cy="14" rx="25" ry="20" fill="#c69b6d" />
+    <!-- Eyes -->
+    <circle cx="-12" cy="-6" r="5" fill="#0d0a05" />
+    <circle cx="12"  cy="-6" r="5" fill="#0d0a05" />
+    <circle cx="-10.5" cy="-7.5" r="1.6" fill="#fff" />
+    <circle cx="13.5"  cy="-7.5" r="1.6" fill="#fff" />
+    <!-- Nose -->
+    <ellipse cx="0" cy="5" rx="4" ry="3" fill="#1a0c08" />
+    <!-- Teeth -->
+    <rect x="-3.5" y="9"  width="3" height="7" rx="1" fill="#fff8e6" />
+    <rect x="0.5"  y="9"  width="3" height="7" rx="1" fill="#fff8e6" />
+    <!-- Whiskers -->
+    <path d="M-30 6 L-14 7" stroke="#3a2218" stroke-width="1.2" stroke-linecap="round" />
+    <path d="M-30 12 L-14 11" stroke="#3a2218" stroke-width="1.2" stroke-linecap="round" />
+    <path d="M30 6 L14 7" stroke="#3a2218" stroke-width="1.2" stroke-linecap="round" />
+    <path d="M30 12 L14 11" stroke="#3a2218" stroke-width="1.2" stroke-linecap="round" />
+  </g>
+
+  <!-- Hammer swinging in from top-right -->
+  <g transform="translate(195 60) rotate(35)">
+    <rect x="-6" y="0" width="12" height="78" rx="5" fill="url(#wmHammerHandle)" stroke="#3a2412" stroke-width="2" />
+    <rect x="-32" y="-22" width="64" height="32" rx="6" fill="url(#wmHammerHead)" stroke="#4a3a18" stroke-width="2.5" />
+    <rect x="-28" y="-18" width="12" height="24" rx="2" fill="#f1c668" opacity="0.45" />
+  </g>
+
+  <!-- Impact stars -->
+  <g fill="#f1c668">
+    <path d="M90 70 L94 78 L102 80 L94 82 L90 90 L86 82 L78 80 L86 78 Z" />
+    <path d="M70 110 L72.5 115 L77.5 116 L72.5 117 L70 122 L67.5 117 L62.5 116 L67.5 115 Z" />
+  </g>
+</svg>
