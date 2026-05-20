@@ -1,0 +1,72 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="swBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#271144" />
+      <stop offset="100%" stop-color="#06080f" />
+    </linearGradient>
+    <radialGradient id="swHub" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="70%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#7c2d12" />
+    </radialGradient>
+  </defs>
+
+  <!-- Card -->
+  <rect width="256" height="256" rx="38" fill="url(#swBg)" />
+
+  <!-- Outer ring -->
+  <circle cx="128" cy="138" r="92" fill="#3b0764" stroke="#7c3aed" stroke-width="4" />
+
+  <!-- 8 slices -->
+  <g transform="translate(128 138)">
+    <!-- Slice 0 — winning gold trophy slot at top -->
+    <path d="M 0 0 L 0 -88 A 88 88 0 0 1 62 -62 Z" fill="#facc15" />
+    <!-- Slice 1 -->
+    <path d="M 0 0 L 62 -62 A 88 88 0 0 1 88 0 Z" fill="#1e293b" />
+    <!-- Slice 2 -->
+    <path d="M 0 0 L 88 0 A 88 88 0 0 1 62 62 Z" fill="#0f172a" />
+    <!-- Slice 3 -->
+    <path d="M 0 0 L 62 62 A 88 88 0 0 1 0 88 Z" fill="#1e293b" />
+    <!-- Slice 4 -->
+    <path d="M 0 0 L 0 88 A 88 88 0 0 1 -62 62 Z" fill="#0f172a" />
+    <!-- Slice 5 -->
+    <path d="M 0 0 L -62 62 A 88 88 0 0 1 -88 0 Z" fill="#1e293b" />
+    <!-- Slice 6 -->
+    <path d="M 0 0 L -88 0 A 88 88 0 0 1 -62 -62 Z" fill="#0f172a" />
+    <!-- Slice 7 -->
+    <path d="M 0 0 L -62 -62 A 88 88 0 0 1 0 -88 Z" fill="#1e293b" />
+
+    <!-- Rim dots -->
+    <g fill="#fde68a" stroke="#7c2d12" stroke-width="0.8">
+      <circle cx="0"   cy="-86" r="3.2" />
+      <circle cx="61"  cy="-61" r="3.2" />
+      <circle cx="86"  cy="0"   r="3.2" />
+      <circle cx="61"  cy="61"  r="3.2" />
+      <circle cx="0"   cy="86"  r="3.2" />
+      <circle cx="-61" cy="61"  r="3.2" />
+      <circle cx="-86" cy="0"   r="3.2" />
+      <circle cx="-61" cy="-61" r="3.2" />
+    </g>
+
+    <!-- Icons in each slice (rough) -->
+    <g font-family="system-ui, sans-serif" font-size="22" text-anchor="middle" dominant-baseline="central">
+      <text x="32"  y="-58" fill="#3a2410">🏆</text>
+      <text x="58"  y="-26" fill="#e2e8f0" font-size="18">👎</text>
+      <text x="58"  y="26"  fill="#e2e8f0" font-size="18">💀</text>
+      <text x="32"  y="58"  fill="#fb7185" font-size="18">❌</text>
+      <text x="-32" y="58"  fill="#e2e8f0" font-size="18">🪨</text>
+      <text x="-58" y="26"  fill="#a78bfa" font-size="18">🥴</text>
+      <text x="-58" y="-26" fill="#7dd3fc" font-size="18">🌧</text>
+      <text x="-32" y="-58" fill="#cbd5e1" font-size="18">😴</text>
+    </g>
+
+    <!-- Hub -->
+    <circle cx="0" cy="0" r="20" fill="url(#swHub)" stroke="#2c1305" stroke-width="3" />
+    <text x="0" y="2" font-family="system-ui" font-size="11" font-weight="900"
+          text-anchor="middle" dominant-baseline="central" fill="#2c1305">SPIN</text>
+  </g>
+
+  <!-- Indicator -->
+  <path d="M128 26 L116 60 Q128 52 140 60 Z"
+        fill="#facc15" stroke="#7c2d12" stroke-width="2" stroke-linejoin="round" />
+</svg>

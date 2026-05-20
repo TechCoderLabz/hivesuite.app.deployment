@@ -1,0 +1,73 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="slBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a0a18" />
+      <stop offset="100%" stop-color="#06010a" />
+    </linearGradient>
+    <linearGradient id="slCab" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4c0519" />
+      <stop offset="100%" stop-color="#220308" />
+    </linearGradient>
+    <linearGradient id="slReel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f0408" />
+      <stop offset="100%" stop-color="#050103" />
+    </linearGradient>
+    <linearGradient id="slBtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="slGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Card background -->
+  <rect width="256" height="256" rx="38" fill="url(#slBg)" />
+
+  <!-- Cabinet -->
+  <rect x="34" y="34" width="188" height="188" rx="22"
+        fill="url(#slCab)" stroke="#facc15" stroke-width="4" filter="url(#slGlow)" />
+
+  <!-- Marquee -->
+  <text x="128" y="62" text-anchor="middle" fill="#fde68a"
+        font-family="system-ui, sans-serif" font-size="14" font-weight="900"
+        letter-spacing="3" filter="url(#slGlow)">JACKPOT 3× 🏆</text>
+
+  <!-- Reels well -->
+  <rect x="50" y="78" width="156" height="100" rx="12"
+        fill="#0a0205" stroke="#7c2d12" stroke-width="2" />
+
+  <!-- Three reels -->
+  <g>
+    <rect x="58"  y="86" width="44" height="84" rx="8" fill="url(#slReel)" stroke="#facc15" stroke-width="1.5" />
+    <rect x="106" y="86" width="44" height="84" rx="8" fill="url(#slReel)" stroke="#facc15" stroke-width="1.5" />
+    <rect x="154" y="86" width="44" height="84" rx="8" fill="url(#slReel)" stroke="#facc15" stroke-width="1.5" />
+
+    <!-- Glyphs: 7 / 🏆 / 7 — visual nod to a winning line of trophies -->
+    <text x="80"  y="135" text-anchor="middle" dominant-baseline="central"
+          font-family="system-ui" font-size="32">🏆</text>
+    <text x="128" y="135" text-anchor="middle" dominant-baseline="central"
+          font-family="system-ui" font-size="32">🏆</text>
+    <text x="176" y="135" text-anchor="middle" dominant-baseline="central"
+          font-family="system-ui" font-size="32">🏆</text>
+
+    <!-- Payline -->
+    <line x1="56" y1="130" x2="200" y2="130"
+          stroke="#facc15" stroke-width="2" opacity="0.8" filter="url(#slGlow)" />
+  </g>
+
+  <!-- Pull button -->
+  <rect x="74" y="188" width="108" height="22" rx="11"
+        fill="url(#slBtn)" stroke="#7c2d12" stroke-width="1.5" />
+  <text x="128" y="200" text-anchor="middle" dominant-baseline="central"
+        font-family="system-ui" font-size="11" font-weight="900"
+        letter-spacing="2" fill="#2c1305">🕹 PULL</text>
+
+  <!-- Side lever knob -->
+  <circle cx="222" cy="138" r="10" fill="#facc15" stroke="#7c2d12" stroke-width="2" />
+  <rect x="218" y="138" width="8" height="50" rx="2" fill="#facc15" stroke="#7c2d12" stroke-width="1.5" />
+</svg>

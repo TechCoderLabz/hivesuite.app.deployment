@@ -1,0 +1,51 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ttBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#152244" />
+      <stop offset="100%" stop-color="#06080f" />
+    </linearGradient>
+    <filter id="ttGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Card background -->
+  <rect width="256" height="256" rx="38" fill="url(#ttBg)" />
+
+  <!-- Soft inner glow ring -->
+  <rect x="6" y="6" width="244" height="244" rx="32" fill="none"
+        stroke="rgba(125,211,252,0.12)" stroke-width="2" />
+
+  <!-- Grid lines (rounded, glowing) -->
+  <g stroke="#3b5398" stroke-width="10" stroke-linecap="round" filter="url(#ttGlow)">
+    <line x1="108" y1="44"  x2="108" y2="212" />
+    <line x1="148" y1="44"  x2="148" y2="212" />
+    <line x1="44"  y1="108" x2="212" y2="108" />
+    <line x1="44"  y1="148" x2="212" y2="148" />
+  </g>
+
+  <!-- X at top-left (cyan) -->
+  <g stroke="#22d3ee" stroke-width="14" stroke-linecap="round" filter="url(#ttGlow)">
+    <line x1="64"  y1="64"  x2="92"  y2="92" />
+    <line x1="92"  y1="64"  x2="64"  y2="92" />
+  </g>
+
+  <!-- O at center (pink) -->
+  <circle cx="128" cy="128" r="14" fill="none"
+          stroke="#f472b6" stroke-width="14" filter="url(#ttGlow)" />
+
+  <!-- X at bottom-right (cyan) -->
+  <g stroke="#22d3ee" stroke-width="14" stroke-linecap="round" filter="url(#ttGlow)">
+    <line x1="164" y1="164" x2="192" y2="192" />
+    <line x1="192" y1="164" x2="164" y2="192" />
+  </g>
+
+  <!-- Winning diagonal sash on top of the X-X-? diagonal -->
+  <line x1="60" y1="60" x2="196" y2="196"
+        stroke="rgba(253, 224, 71, 0.55)" stroke-width="6"
+        stroke-linecap="round" />
+</svg>
