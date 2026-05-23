@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">
+  <!-- Road Fighter — top-down racer. Vertical asphalt road framed by
+       green grass, red-and-white curbs, a dashed center line, and the
+       player's red car near the bottom with a single blue enemy car
+       above it. Reads as a classic 8-bit racer at a glance. -->
+  <defs>
+    <linearGradient id="rf-grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a8c3a"/>
+      <stop offset="100%" stop-color="#1f6c2c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grass backdrop -->
+  <rect x="0" y="0" width="64" height="64" rx="10" fill="url(#rf-grass)"/>
+
+  <!-- Roadside crowd stripes -->
+  <g>
+    <rect x="9" y="0" width="3" height="64" fill="#9a3a3a"/>
+    <rect x="52" y="0" width="3" height="64" fill="#3a4aa3"/>
+  </g>
+
+  <!-- Asphalt -->
+  <rect x="16" y="0" width="32" height="64" fill="#5e6470"/>
+
+  <!-- Red/white curb stripes -->
+  <g>
+    <rect x="16" y="0"  width="3" height="6" fill="#d63131"/>
+    <rect x="16" y="6"  width="3" height="6" fill="#f4f4f4"/>
+    <rect x="16" y="12" width="3" height="6" fill="#d63131"/>
+    <rect x="16" y="18" width="3" height="6" fill="#f4f4f4"/>
+    <rect x="16" y="24" width="3" height="6" fill="#d63131"/>
+    <rect x="16" y="30" width="3" height="6" fill="#f4f4f4"/>
+    <rect x="16" y="36" width="3" height="6" fill="#d63131"/>
+    <rect x="16" y="42" width="3" height="6" fill="#f4f4f4"/>
+    <rect x="16" y="48" width="3" height="6" fill="#d63131"/>
+    <rect x="16" y="54" width="3" height="6" fill="#f4f4f4"/>
+
+    <rect x="45" y="0"  width="3" height="6" fill="#f4f4f4"/>
+    <rect x="45" y="6"  width="3" height="6" fill="#d63131"/>
+    <rect x="45" y="12" width="3" height="6" fill="#f4f4f4"/>
+    <rect x="45" y="18" width="3" height="6" fill="#d63131"/>
+    <rect x="45" y="24" width="3" height="6" fill="#f4f4f4"/>
+    <rect x="45" y="30" width="3" height="6" fill="#d63131"/>
+    <rect x="45" y="36" width="3" height="6" fill="#f4f4f4"/>
+    <rect x="45" y="42" width="3" height="6" fill="#d63131"/>
+    <rect x="45" y="48" width="3" height="6" fill="#f4f4f4"/>
+    <rect x="45" y="54" width="3" height="6" fill="#d63131"/>
+  </g>
+
+  <!-- Center dashed lane line -->
+  <g fill="#e8e8ec">
+    <rect x="31" y="4"  width="2" height="6"/>
+    <rect x="31" y="14" width="2" height="6"/>
+    <rect x="31" y="24" width="2" height="6"/>
+    <rect x="31" y="34" width="2" height="6"/>
+    <rect x="31" y="44" width="2" height="6"/>
+    <rect x="31" y="54" width="2" height="6"/>
+  </g>
+
+  <!-- Blue enemy car (upper) -->
+  <g>
+    <rect x="22" y="14" width="9" height="14" rx="2" fill="#2c6ef2"/>
+    <rect x="23" y="18" width="7" height="6" fill="#0a1024"/>
+    <rect x="20" y="16" width="2" height="3" fill="#1a1116"/>
+    <rect x="31" y="16" width="2" height="3" fill="#1a1116"/>
+    <rect x="20" y="23" width="2" height="3" fill="#1a1116"/>
+    <rect x="31" y="23" width="2" height="3" fill="#1a1116"/>
+  </g>
+
+  <!-- Player red car (lower) -->
+  <g>
+    <rect x="33" y="40" width="9" height="14" rx="2" fill="#e03131"/>
+    <rect x="34" y="44" width="7" height="6" fill="#220606"/>
+    <rect x="31" y="42" width="2" height="3" fill="#1a1116"/>
+    <rect x="42" y="42" width="2" height="3" fill="#1a1116"/>
+    <rect x="31" y="49" width="2" height="3" fill="#1a1116"/>
+    <rect x="42" y="49" width="2" height="3" fill="#1a1116"/>
+  </g>
+</svg>
