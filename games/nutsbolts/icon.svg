@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" fill="none">
+  <defs>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2c3138"/>
+      <stop offset="0.18" stop-color="#4f5560"/>
+      <stop offset="0.5" stop-color="#d8dde3"/>
+      <stop offset="0.82" stop-color="#4f5560"/>
+      <stop offset="1" stop-color="#2c3138"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8dde3"/>
+      <stop offset="0.55" stop-color="#8b939e"/>
+      <stop offset="1" stop-color="#4f5560"/>
+    </linearGradient>
+    <linearGradient id="nut-red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff7a8a"/>
+      <stop offset="0.5" stop-color="#e63946"/>
+      <stop offset="1" stop-color="#8a1c27"/>
+    </linearGradient>
+    <linearGradient id="nut-amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="0.5" stop-color="#f5a524"/>
+      <stop offset="1" stop-color="#8a5410"/>
+    </linearGradient>
+    <linearGradient id="nut-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#86efac"/>
+      <stop offset="0.5" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#0f6428"/>
+    </linearGradient>
+    <linearGradient id="nut-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7eb1ff"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1a3870"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bolt 1: red over amber -->
+  <g transform="translate(46 22)">
+    <!-- cap -->
+    <rect x="2" y="0" width="36" height="14" fill="url(#cap)" stroke="#2c3138" rx="2"/>
+    <!-- shaft -->
+    <rect x="13" y="14" width="14" height="118" fill="url(#steel)" stroke="#2c3138" stroke-width="0.5"/>
+    <!-- base -->
+    <rect x="0" y="132" width="40" height="14" fill="url(#cap)" stroke="#2c3138" rx="3"/>
+    <!-- nut: amber (top of stack physically lower) -->
+    <polygon points="20,72 38,82 38,102 20,112 2,102 2,82" fill="url(#nut-amber)" stroke="rgba(0,0,0,0.45)"/>
+    <polygon points="20,84 26,87 26,97 20,100 14,97 14,87" fill="#0d0d0f"/>
+    <!-- nut: red -->
+    <polygon points="20,102 38,112 38,132 20,142 2,132 2,112" fill="url(#nut-red)" stroke="rgba(0,0,0,0.45)"/>
+    <polygon points="20,114 26,117 26,127 20,130 14,127 14,117" fill="#0d0d0f"/>
+  </g>
+
+  <!-- Bolt 2: green over blue over red -->
+  <g transform="translate(100 22)">
+    <rect x="2" y="0" width="36" height="14" fill="url(#cap)" stroke="#2c3138" rx="2"/>
+    <rect x="13" y="14" width="14" height="118" fill="url(#steel)" stroke="#2c3138" stroke-width="0.5"/>
+    <rect x="0" y="132" width="40" height="14" fill="url(#cap)" stroke="#2c3138" rx="3"/>
+    <!-- nut: red bottom -->
+    <polygon points="20,102 38,112 38,132 20,142 2,132 2,112" fill="url(#nut-red)" stroke="rgba(0,0,0,0.45)"/>
+    <polygon points="20,114 26,117 26,127 20,130 14,127 14,117" fill="#0d0d0f"/>
+    <!-- nut: blue -->
+    <polygon points="20,72 38,82 38,102 20,112 2,102 2,82" fill="url(#nut-blue)" stroke="rgba(0,0,0,0.45)"/>
+    <polygon points="20,84 26,87 26,97 20,100 14,97 14,87" fill="#0d0d0f"/>
+    <!-- nut: green top -->
+    <polygon points="20,42 38,52 38,72 20,82 2,72 2,52" fill="url(#nut-green)" stroke="rgba(0,0,0,0.45)"/>
+    <polygon points="20,54 26,57 26,67 20,70 14,67 14,57" fill="#0d0d0f"/>
+  </g>
+
+  <!-- Bolt 3: empty -->
+  <g transform="translate(154 22)">
+    <rect x="2" y="0" width="36" height="14" fill="url(#cap)" stroke="#2c3138" rx="2"/>
+    <rect x="13" y="14" width="14" height="118" fill="url(#steel)" stroke="#2c3138" stroke-width="0.5"/>
+    <rect x="0" y="132" width="40" height="14" fill="url(#cap)" stroke="#2c3138" rx="3"/>
+  </g>
+</svg>
