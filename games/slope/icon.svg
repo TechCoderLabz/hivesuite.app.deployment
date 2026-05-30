@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="slope-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e0a24"/>
+      <stop offset="1" stop-color="#070414"/>
+    </linearGradient>
+    <linearGradient id="slope-track" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1bff8a"/>
+      <stop offset="1" stop-color="#00b160"/>
+    </linearGradient>
+    <radialGradient id="slope-ball" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c5c8d6"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" rx="20" fill="url(#slope-bg)"/>
+  <!-- slope track receding into the distance -->
+  <path d="M40 14 L88 14 L116 116 L12 116 Z" fill="url(#slope-track)" opacity="0.95"/>
+  <!-- centre lane line -->
+  <path d="M64 14 L64 116" stroke="#003322" stroke-width="2" opacity="0.55"/>
+  <!-- red obstacles -->
+  <rect x="48" y="40" width="14" height="14" rx="2" fill="#ff2c4d"/>
+  <rect x="74" y="60" width="14" height="14" rx="2" fill="#ff2c4d"/>
+  <rect x="44" y="82" width="14" height="14" rx="2" fill="#ff2c4d"/>
+  <!-- player ball -->
+  <circle cx="64" cy="100" r="11" fill="url(#slope-ball)"/>
+  <circle cx="64" cy="100" r="11" fill="none" stroke="#2b2e3a" stroke-width="0.6" opacity="0.5"/>
+</svg>

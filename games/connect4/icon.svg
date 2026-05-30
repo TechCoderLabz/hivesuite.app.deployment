@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <radialGradient id="c4iconRed" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="55%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </radialGradient>
+    <radialGradient id="c4iconYellow" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="55%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </radialGradient>
+    <linearGradient id="c4iconBoard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#1c2a64"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="8" width="56" height="52" rx="8" fill="url(#c4iconBoard)" stroke="#3b5398" stroke-width="2"/>
+  <g>
+    <!-- row 0 (top) — all empty -->
+    <circle cx="14" cy="18" r="5" fill="#04060e"/>
+    <circle cx="26" cy="18" r="5" fill="#04060e"/>
+    <circle cx="38" cy="18" r="5" fill="#04060e"/>
+    <circle cx="50" cy="18" r="5" fill="#04060e"/>
+    <!-- row 1 (middle) — some yellow -->
+    <circle cx="14" cy="34" r="5" fill="#04060e"/>
+    <circle cx="26" cy="34" r="5" fill="url(#c4iconYellow)"/>
+    <circle cx="38" cy="34" r="5" fill="url(#c4iconYellow)"/>
+    <circle cx="50" cy="34" r="5" fill="#04060e"/>
+    <!-- row 2 (bottom) — four red in a row = winner -->
+    <circle cx="14" cy="50" r="5" fill="url(#c4iconRed)"/>
+    <circle cx="26" cy="50" r="5" fill="url(#c4iconRed)"/>
+    <circle cx="38" cy="50" r="5" fill="url(#c4iconRed)"/>
+    <circle cx="50" cy="50" r="5" fill="url(#c4iconRed)"/>
+  </g>
+  <!-- Winning-line glow across the four reds -->
+  <line x1="14" y1="50" x2="50" y2="50" stroke="#fde68a" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+</svg>

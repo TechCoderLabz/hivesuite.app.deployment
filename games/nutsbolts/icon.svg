@@ -1,75 +1,195 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" fill="none">
   <defs>
-    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#2c3138"/>
+    <!-- ===== Steel gradients ===== -->
+    <linearGradient id="nbiSteelBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3f6f9"/>
+      <stop offset="0.14" stop-color="#dce1e8"/>
+      <stop offset="0.3" stop-color="#bdc4cf"/>
+      <stop offset="0.5" stop-color="#878d97"/>
+      <stop offset="0.74" stop-color="#5a606b"/>
+      <stop offset="0.92" stop-color="#363a42"/>
+      <stop offset="1" stop-color="#1d2026"/>
+    </linearGradient>
+    <linearGradient id="nbiSteelRod" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#131519"/>
       <stop offset="0.18" stop-color="#4f5560"/>
-      <stop offset="0.5" stop-color="#d8dde3"/>
+      <stop offset="0.38" stop-color="#8b939e"/>
+      <stop offset="0.5" stop-color="#e8ecf0"/>
+      <stop offset="0.62" stop-color="#8b939e"/>
       <stop offset="0.82" stop-color="#4f5560"/>
-      <stop offset="1" stop-color="#2c3138"/>
+      <stop offset="1" stop-color="#131519"/>
     </linearGradient>
-    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#d8dde3"/>
-      <stop offset="0.55" stop-color="#8b939e"/>
-      <stop offset="1" stop-color="#4f5560"/>
+    <radialGradient id="nbiBaseTop" cx="0.5" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#f7f9fc"/>
+      <stop offset="0.3" stop-color="#dce1e8"/>
+      <stop offset="0.65" stop-color="#8e95a1"/>
+      <stop offset="1" stop-color="#3c4148"/>
+    </radialGradient>
+    <linearGradient id="nbiBaseSide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8e95a1"/>
+      <stop offset="0.5" stop-color="#5a606b"/>
+      <stop offset="1" stop-color="#1f2329"/>
     </linearGradient>
-    <linearGradient id="nut-red" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ff7a8a"/>
+
+    <!-- ===== Nut colour gradients (vertical 3D bevel) ===== -->
+    <linearGradient id="nbiRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8a96"/>
+      <stop offset="0.1" stop-color="#f56a78"/>
+      <stop offset="0.26" stop-color="#ec505f"/>
       <stop offset="0.5" stop-color="#e63946"/>
-      <stop offset="1" stop-color="#8a1c27"/>
+      <stop offset="0.74" stop-color="#b22c37"/>
+      <stop offset="0.92" stop-color="#7a1f26"/>
+      <stop offset="1" stop-color="#5c161c"/>
     </linearGradient>
-    <linearGradient id="nut-amber" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffd166"/>
+    <linearGradient id="nbiAmber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffdb8c"/>
+      <stop offset="0.1" stop-color="#ffc859"/>
+      <stop offset="0.26" stop-color="#fab63a"/>
       <stop offset="0.5" stop-color="#f5a524"/>
-      <stop offset="1" stop-color="#8a5410"/>
+      <stop offset="0.74" stop-color="#bd7f18"/>
+      <stop offset="0.92" stop-color="#85580f"/>
+      <stop offset="1" stop-color="#5e3e0a"/>
     </linearGradient>
-    <linearGradient id="nut-green" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#86efac"/>
+    <linearGradient id="nbiGreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9eedb5"/>
+      <stop offset="0.1" stop-color="#6cd989"/>
+      <stop offset="0.26" stop-color="#46c870"/>
       <stop offset="0.5" stop-color="#22c55e"/>
-      <stop offset="1" stop-color="#0f6428"/>
+      <stop offset="0.74" stop-color="#1a994a"/>
+      <stop offset="0.92" stop-color="#106b32"/>
+      <stop offset="1" stop-color="#0b4a23"/>
     </linearGradient>
-    <linearGradient id="nut-blue" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#7eb1ff"/>
+    <linearGradient id="nbiBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9bbdff"/>
+      <stop offset="0.1" stop-color="#74a1ff"/>
+      <stop offset="0.26" stop-color="#558cf9"/>
       <stop offset="0.5" stop-color="#3b82f6"/>
-      <stop offset="1" stop-color="#1a3870"/>
+      <stop offset="0.74" stop-color="#2c66c4"/>
+      <stop offset="0.92" stop-color="#1f478a"/>
+      <stop offset="1" stop-color="#163261"/>
     </linearGradient>
+
+    <!-- Cylindrical vignette overlay (shared across all nuts + the screwhead) -->
+    <linearGradient id="nbiVig" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0" stop-color="#000" stop-opacity="0.42"/>
+      <stop offset="0.18" stop-color="#000" stop-opacity="0.08"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.10"/>
+      <stop offset="0.82" stop-color="#000" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.48"/>
+    </linearGradient>
+
+    <!-- Thread pattern — repeats vertically down the rod with a dark groove
+         line and a thin lighter peak line per repeat, fill underneath uses
+         the steel-rod metallic gradient. -->
+    <pattern id="nbiThreadPat" x="0" y="0" width="14" height="4.5" patternUnits="userSpaceOnUse">
+      <rect width="14" height="4.5" fill="url(#nbiSteelRod)"/>
+      <line x1="0" y1="1" x2="14" y2="1" stroke="rgba(0,0,0,0.55)" stroke-width="1.2"/>
+      <line x1="0" y1="2.5" x2="14" y2="2.5" stroke="rgba(220,226,234,0.32)" stroke-width="0.6"/>
+    </pattern>
+
+    <!-- ===== Reusable pieces ===== -->
+    <!-- Threaded shaft. preserveAspectRatio=none lets the parent <use> stretch
+         the symbol freely on each axis. -->
+    <symbol id="nbiShaft" viewBox="0 0 12 156" preserveAspectRatio="none">
+      <rect width="12" height="156" fill="url(#nbiThreadPat)"
+            stroke="rgba(0,0,0,0.6)" stroke-width="0.5"/>
+    </symbol>
+
+    <!-- Hex screwhead with the same chamfer + vignette + seam recipe as the
+         nuts so the whole bolt reads as one consistent 3D object. -->
+    <symbol id="nbiHead" viewBox="0 0 50 18" preserveAspectRatio="none">
+      <polygon points="11,0 39,0 50,9 39,18 11,18 0,9" fill="url(#nbiSteelBody)"/>
+      <polygon points="11,0 39,0 50,9 39,18 11,18 0,9" fill="url(#nbiVig)"/>
+      <polygon points="11,0 39,0 41,2.2 9,2.2" fill="#fafcff"/>
+      <polygon points="9,15.8 41,15.8 39,18 11,18" fill="#1c1f24"/>
+      <line x1="25" y1="2.2" x2="25" y2="15.8" stroke="rgba(0,0,0,0.4)" stroke-width="0.5"/>
+      <ellipse cx="25" cy="1" rx="10" ry="0.55" fill="rgba(255,255,255,0.85)"/>
+      <polygon points="11,0 39,0 50,9 39,18 11,18 0,9"
+               fill="none" stroke="rgba(0,0,0,0.7)" stroke-width="0.7"/>
+    </symbol>
+
+    <!-- Round base flange — top ellipse (perspective face) + curved side band
+         showing the disk's thickness + contact shadow underneath. -->
+    <symbol id="nbiBase" viewBox="0 0 50 24" preserveAspectRatio="none">
+      <ellipse cx="25" cy="22" rx="24" ry="2" fill="rgba(0,0,0,0.55)"/>
+      <path d="M 1,11 Q 1,18 25,18 Q 49,18 49,11 L 49,14 Q 49,21 25,21 Q 1,21 1,14 Z"
+            fill="url(#nbiBaseSide)" stroke="rgba(0,0,0,0.6)" stroke-width="0.6"/>
+      <ellipse cx="25" cy="10" rx="24" ry="8" fill="url(#nbiBaseTop)"
+               stroke="rgba(0,0,0,0.65)" stroke-width="0.8"/>
+      <ellipse cx="25" cy="4.5" rx="17" ry="1.4" fill="rgba(255,255,255,0.65)"/>
+    </symbol>
+
+    <!-- One hex-nut symbol per colour. Each is 50×30 — chamfer + vignette
+         + centre seam + specular + outline, matching the in-game Nut SVG. -->
+    <symbol id="nbiNutRed" viewBox="0 0 50 30" preserveAspectRatio="none">
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15" fill="url(#nbiRed)"/>
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15" fill="url(#nbiVig)"/>
+      <polygon points="11,0 39,0 41,2.5 9,2.5" fill="#ffb8c2"/>
+      <polygon points="9,27.5 41,27.5 39,30 11,30" fill="#4d121a"/>
+      <line x1="25" y1="2.5" x2="25" y2="27.5" stroke="rgba(0,0,0,0.35)" stroke-width="0.7"/>
+      <line x1="25.7" y1="3.5" x2="25.7" y2="26.5" stroke="rgba(255,255,255,0.16)" stroke-width="0.4"/>
+      <ellipse cx="25" cy="1.3" rx="11" ry="0.7" fill="rgba(255,255,255,0.7)"/>
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15"
+               fill="none" stroke="rgba(0,0,0,0.65)" stroke-width="0.7"/>
+    </symbol>
+    <symbol id="nbiNutAmber" viewBox="0 0 50 30" preserveAspectRatio="none">
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15" fill="url(#nbiAmber)"/>
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15" fill="url(#nbiVig)"/>
+      <polygon points="11,0 39,0 41,2.5 9,2.5" fill="#ffe6a8"/>
+      <polygon points="9,27.5 41,27.5 39,30 11,30" fill="#4d3308"/>
+      <line x1="25" y1="2.5" x2="25" y2="27.5" stroke="rgba(0,0,0,0.35)" stroke-width="0.7"/>
+      <line x1="25.7" y1="3.5" x2="25.7" y2="26.5" stroke="rgba(255,255,255,0.16)" stroke-width="0.4"/>
+      <ellipse cx="25" cy="1.3" rx="11" ry="0.7" fill="rgba(255,255,255,0.7)"/>
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15"
+               fill="none" stroke="rgba(0,0,0,0.65)" stroke-width="0.7"/>
+    </symbol>
+    <symbol id="nbiNutGreen" viewBox="0 0 50 30" preserveAspectRatio="none">
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15" fill="url(#nbiGreen)"/>
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15" fill="url(#nbiVig)"/>
+      <polygon points="11,0 39,0 41,2.5 9,2.5" fill="#bdf3ce"/>
+      <polygon points="9,27.5 41,27.5 39,30 11,30" fill="#093e1d"/>
+      <line x1="25" y1="2.5" x2="25" y2="27.5" stroke="rgba(0,0,0,0.35)" stroke-width="0.7"/>
+      <line x1="25.7" y1="3.5" x2="25.7" y2="26.5" stroke="rgba(255,255,255,0.16)" stroke-width="0.4"/>
+      <ellipse cx="25" cy="1.3" rx="11" ry="0.7" fill="rgba(255,255,255,0.7)"/>
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15"
+               fill="none" stroke="rgba(0,0,0,0.65)" stroke-width="0.7"/>
+    </symbol>
+    <symbol id="nbiNutBlue" viewBox="0 0 50 30" preserveAspectRatio="none">
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15" fill="url(#nbiBlue)"/>
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15" fill="url(#nbiVig)"/>
+      <polygon points="11,0 39,0 41,2.5 9,2.5" fill="#b9d2ff"/>
+      <polygon points="9,27.5 41,27.5 39,30 11,30" fill="#102b54"/>
+      <line x1="25" y1="2.5" x2="25" y2="27.5" stroke="rgba(0,0,0,0.35)" stroke-width="0.7"/>
+      <line x1="25.7" y1="3.5" x2="25.7" y2="26.5" stroke="rgba(255,255,255,0.16)" stroke-width="0.4"/>
+      <ellipse cx="25" cy="1.3" rx="11" ry="0.7" fill="rgba(255,255,255,0.7)"/>
+      <polygon points="11,0 39,0 50,15 39,30 11,30 0,15"
+               fill="none" stroke="rgba(0,0,0,0.65)" stroke-width="0.7"/>
+    </symbol>
   </defs>
 
-  <!-- Bolt 1: red over amber -->
-  <g transform="translate(46 22)">
-    <!-- cap -->
-    <rect x="2" y="0" width="36" height="14" fill="url(#cap)" stroke="#2c3138" rx="2"/>
-    <!-- shaft -->
-    <rect x="13" y="14" width="14" height="118" fill="url(#steel)" stroke="#2c3138" stroke-width="0.5"/>
-    <!-- base -->
-    <rect x="0" y="132" width="40" height="14" fill="url(#cap)" stroke="#2c3138" rx="3"/>
-    <!-- nut: amber (top of stack physically lower) -->
-    <polygon points="20,72 38,82 38,102 20,112 2,102 2,82" fill="url(#nut-amber)" stroke="rgba(0,0,0,0.45)"/>
-    <polygon points="20,84 26,87 26,97 20,100 14,97 14,87" fill="#0d0d0f"/>
-    <!-- nut: red -->
-    <polygon points="20,102 38,112 38,132 20,142 2,132 2,112" fill="url(#nut-red)" stroke="rgba(0,0,0,0.45)"/>
-    <polygon points="20,114 26,117 26,127 20,130 14,127 14,117" fill="#0d0d0f"/>
+  <!-- ===== Bolt 1: amber over red (2 nuts) ===== -->
+  <g transform="translate(15 4)">
+    <use href="#nbiShaft" x="19" y="14" width="12" height="156"/>
+    <use href="#nbiBase"  x="0"  y="170" width="50" height="24"/>
+    <use href="#nbiNutRed"   x="0" y="140" width="50" height="30"/>
+    <use href="#nbiNutAmber" x="0" y="110" width="50" height="30"/>
+    <use href="#nbiHead" x="4" y="0" width="42" height="16"/>
   </g>
 
-  <!-- Bolt 2: green over blue over red -->
-  <g transform="translate(100 22)">
-    <rect x="2" y="0" width="36" height="14" fill="url(#cap)" stroke="#2c3138" rx="2"/>
-    <rect x="13" y="14" width="14" height="118" fill="url(#steel)" stroke="#2c3138" stroke-width="0.5"/>
-    <rect x="0" y="132" width="40" height="14" fill="url(#cap)" stroke="#2c3138" rx="3"/>
-    <!-- nut: red bottom -->
-    <polygon points="20,102 38,112 38,132 20,142 2,132 2,112" fill="url(#nut-red)" stroke="rgba(0,0,0,0.45)"/>
-    <polygon points="20,114 26,117 26,127 20,130 14,127 14,117" fill="#0d0d0f"/>
-    <!-- nut: blue -->
-    <polygon points="20,72 38,82 38,102 20,112 2,102 2,82" fill="url(#nut-blue)" stroke="rgba(0,0,0,0.45)"/>
-    <polygon points="20,84 26,87 26,97 20,100 14,97 14,87" fill="#0d0d0f"/>
-    <!-- nut: green top -->
-    <polygon points="20,42 38,52 38,72 20,82 2,72 2,52" fill="url(#nut-green)" stroke="rgba(0,0,0,0.45)"/>
-    <polygon points="20,54 26,57 26,67 20,70 14,67 14,57" fill="#0d0d0f"/>
+  <!-- ===== Bolt 2: green / blue / red (3 nuts) ===== -->
+  <g transform="translate(95 4)">
+    <use href="#nbiShaft" x="19" y="14" width="12" height="156"/>
+    <use href="#nbiBase"  x="0"  y="170" width="50" height="24"/>
+    <use href="#nbiNutRed"   x="0" y="140" width="50" height="30"/>
+    <use href="#nbiNutBlue"  x="0" y="110" width="50" height="30"/>
+    <use href="#nbiNutGreen" x="0" y="80"  width="50" height="30"/>
+    <use href="#nbiHead" x="4" y="0" width="42" height="16"/>
   </g>
 
-  <!-- Bolt 3: empty -->
-  <g transform="translate(154 22)">
-    <rect x="2" y="0" width="36" height="14" fill="url(#cap)" stroke="#2c3138" rx="2"/>
-    <rect x="13" y="14" width="14" height="118" fill="url(#steel)" stroke="#2c3138" stroke-width="0.5"/>
-    <rect x="0" y="132" width="40" height="14" fill="url(#cap)" stroke="#2c3138" rx="3"/>
+  <!-- ===== Bolt 3: empty rod ===== -->
+  <g transform="translate(175 4)">
+    <use href="#nbiShaft" x="19" y="14" width="12" height="156"/>
+    <use href="#nbiBase"  x="0"  y="170" width="50" height="24"/>
+    <use href="#nbiHead" x="4" y="0" width="42" height="16"/>
   </g>
 </svg>

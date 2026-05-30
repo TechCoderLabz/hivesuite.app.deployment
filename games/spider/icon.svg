@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <linearGradient id="spIconFelt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2a4a"/>
+      <stop offset="100%" stop-color="#0e1a30"/>
+    </linearGradient>
+    <linearGradient id="spIconBack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#1c2a64"/>
+    </linearGradient>
+  </defs>
+  <!-- Felt background -->
+  <rect x="0" y="0" width="64" height="64" rx="10" fill="url(#spIconFelt)"/>
+
+  <!-- Spider web hint: 4 diagonal threads from a centre top point -->
+  <g stroke="rgba(255,255,255,0.10)" stroke-width="0.6" fill="none">
+    <path d="M32 4 L8 22"/>
+    <path d="M32 4 L22 22"/>
+    <path d="M32 4 L42 22"/>
+    <path d="M32 4 L56 22"/>
+    <path d="M14 14 Q24 16 32 14 T56 14" />
+    <path d="M10 20 Q22 22 32 20 T58 20" />
+  </g>
+
+  <!-- A stack of three cards rising from the bottom, slightly fanned. -->
+  <!-- Back of stack (face down) -->
+  <g transform="translate(7 30) rotate(-10)">
+    <rect width="18" height="28" rx="3" fill="url(#spIconBack)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <path d="M2 4 L16 24 M2 24 L16 4" stroke="rgba(255,255,255,0.18)" stroke-width="1.0" fill="none"/>
+  </g>
+  <!-- K♠ -->
+  <g transform="translate(23 28)">
+    <rect width="18" height="28" rx="3" fill="#fafafa" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <text x="3" y="9" font-family="system-ui, sans-serif" font-size="6" font-weight="800" fill="#111">K</text>
+    <text x="3" y="15" font-family="system-ui, sans-serif" font-size="5" font-weight="700" fill="#111">♠</text>
+    <text x="9" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#111" opacity="0.85">♠</text>
+  </g>
+  <!-- Q♠ -->
+  <g transform="translate(38 30) rotate(10)">
+    <rect width="18" height="28" rx="3" fill="#fafafa" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <text x="3" y="9" font-family="system-ui, sans-serif" font-size="6" font-weight="800" fill="#111">Q</text>
+    <text x="3" y="15" font-family="system-ui, sans-serif" font-size="5" font-weight="700" fill="#111">♠</text>
+    <text x="9" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#111" opacity="0.85">♠</text>
+  </g>
+</svg>
