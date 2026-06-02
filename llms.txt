@@ -8,7 +8,7 @@ The app is a single-page application mounted with React Router's BrowserRouter, 
 
 ## What you can do in HiveSuite
 
-- **Blogs** — long-form posts feed (`/#/dashboard/blogs`), tag and community filters, full Markdown composer with image / video / GIF / poll attachments, colored code blocks with copy, location picker (WorldMapPin), default tags, default beneficiaries, and **scheduled posts**.
+- **Blogs** — long-form posts feed (`/dashboard/blogs`), tag and community filters, full Markdown composer with image / video / GIF / poll attachments, colored code blocks with copy, location picker (WorldMapPin), default tags, default beneficiaries, and **scheduled posts**.
 - **Snaps** — short posts threaded under a daily container (PeakD-compatible), with inline polls, mute / reply controls, and a 500-char composer.
 - **Videos & Shorts** — 3Speak-powered video feed plus a Shorts feed with infinite scroll, optimistic upvoting, and direct in-app uploads (encoder + tus resumable uploads).
 - **Polls** — create and vote on hPolls-compatible polls.

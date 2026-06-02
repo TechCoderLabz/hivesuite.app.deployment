@@ -7,10 +7,12 @@
 
     <!-- ============================================================
          SEO + social previews
-         The app is a SPA mounted with HashRouter, so every route lives
-         under `/#/...`. That means search-engine and LLM crawlers
-         effectively only see the document served at `/` — make sure
-         this <head> answers "what is HiveSuite?" on its own.
+         The app is a SPA mounted with BrowserRouter (real paths, with a
+         404.html SPA fallback). Non-JS crawlers only see the document
+         served at `/`, so this <head> must answer "what is HiveSuite?"
+         on its own. JS-rendering crawlers additionally pick up the
+         per-route title/description/OG tags set at runtime by
+         `src/utils/seo.ts` (post, profile and section pages).
          ============================================================ -->
     <meta name="description" content="HiveSuite is a fast, open social app on the Hive blockchain — read & write blogs, snaps, comments and polls, watch videos and shorts, follow communities, manage your wallet, and play 15+ on-chain arcade games. Free, decentralized, ad-free." />
     <meta name="keywords" content="HiveSuite, Hive blockchain, Hive social, Hive blog app, Hive snaps, Hive videos, Hive shorts, Hive polls, 3Speak, Web3 social, decentralized social, PeakD alternative, Ecency alternative, Hive games, Hive wallet, Hive Keychain" />
@@ -163,7 +165,7 @@
         }
       })(window.location);
     </script>
-    <script type="module" crossorigin src="/assets/index-DaMJoPt9.js"></script>
+    <script type="module" crossorigin src="/assets/index-Bgg-zGQ6.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DBxBTVTB.css">
   <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body>

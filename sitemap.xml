@@ -56,6 +56,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://hivesuite.app/dashboard/explorer</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hivesuite.app/dashboard/search</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hivesuite.app/dashboard/exchanges</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://hivesuite.app/changelog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -72,6 +87,11 @@
   </url>
   <url>
     <loc>https://hivesuite.app/eula</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://hivesuite.app/csae-standards</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
