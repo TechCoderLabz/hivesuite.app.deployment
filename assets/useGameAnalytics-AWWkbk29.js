@@ -1,0 +1,1 @@
+import{r as c,a7 as f,a8 as r}from"./index-4JFrbOHj.js";function a(u,t){c.useEffect(()=>{f(u)},[u]);const n=c.useRef(null);c.useEffect(()=>{t&&n.current!==t?(n.current=t,r(u,t)):!t&&n.current!==null&&(n.current=null)},[u,t])}export{a as u};
