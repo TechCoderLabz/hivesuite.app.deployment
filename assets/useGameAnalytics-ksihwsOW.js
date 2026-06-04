@@ -1,0 +1,1 @@
+import{r as c,a8 as f,a9 as r}from"./index-DceCrSYf.js";function a(u,t){c.useEffect(()=>{f(u)},[u]);const n=c.useRef(null);c.useEffect(()=>{t&&n.current!==t?(n.current=t,r(u,t)):!t&&n.current!==null&&(n.current=null)},[u,t])}export{a as u};
